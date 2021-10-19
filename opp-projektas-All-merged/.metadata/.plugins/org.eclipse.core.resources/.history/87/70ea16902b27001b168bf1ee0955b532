@@ -1,0 +1,24 @@
+package com.boardgame.GameWindow.Factory_pattern;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class MovementEventTest {
+
+    MovementEvent testing;
+	@Test
+	public void testSetName() {
+		testing.setName("meow");
+		String newname = testing.getname();
+		assertEquals("meow", newname);
+	}
+
+	@Test
+	public void testSetTiles() {
+		testing.setTiles(8);
+		int newtiles = testing.getTiles();
+		assertEquals(8, newtiles);
+	}
+
+}

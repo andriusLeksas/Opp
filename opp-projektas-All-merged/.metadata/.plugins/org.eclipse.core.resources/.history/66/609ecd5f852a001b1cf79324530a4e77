@@ -1,0 +1,14 @@
+package com.boardgame.server;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class ClientHandlerTest {
+
+	@Test
+	public void testRun() {
+		fail("Not yet implemented");
+	}
+
+}

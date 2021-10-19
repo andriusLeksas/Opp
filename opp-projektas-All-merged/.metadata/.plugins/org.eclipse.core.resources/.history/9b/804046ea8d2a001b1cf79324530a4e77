@@ -1,0 +1,77 @@
+package com.boardgame.GameWindow.Logic;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class PlayerIconTest {
+
+	@Test
+	public void testSetDecoratorCounter() {
+		PlayerIcon test = new PlayerIcon(0, 0, 0);
+		test.setDecoratorCounter(5);
+		int ask = test.DecoratorCounter();
+		assertEquals(ask, 5);
+	}
+
+	@Test
+	public void testEventName() {
+		PlayerIcon test = new PlayerIcon(0, 0, 0);
+		test.setEventName("TestEvent");
+		String ask = test.getEventName();
+		assertEquals(ask, "TestEvent");
+	}
+
+	@Test
+	public void testEffectedTurns() {
+		PlayerIcon test = new PlayerIcon(0, 0, 0);
+		test.setEffectedTurns(5);
+		int ask = test.getEffectedTurns();
+		assertEquals(ask, 5);
+	}
+
+	@Test
+	public void testEffectedByEvent() {
+		PlayerIcon test = new PlayerIcon(0, 0, 0);
+		test.setEffectedByEvent(true);
+		assertTrue(test.getEffectedByEvent());
+		test.setEffectedByEvent(false);
+		assertTrue(test.getEffectedByEvent());
+	}
+
+	@Test
+	public void testX() {
+		PlayerIcon test = new PlayerIcon(0, 0, 0);
+		assertEquals(test.getCurrentX(), 0);
+		test.setX(5);
+		assertEquals(test.getCurrentX(), 5);
+	}
+
+	@Test
+	public void testY() {
+		PlayerIcon test = new PlayerIcon(0, 0, 0);
+		assertEquals(test.getCurrentY(), 0);
+		test.setY(5);
+		assertEquals(test.getCurrentY(), 5);
+	}
+
+	@Test
+	public void testVoidRolled() {
+		PlayerIcon test = new PlayerIcon(0, 0, 0);
+		test.setSumRolled(6);
+		assertEquals(test.getSumRolled(), 6);
+		test.sumRolled(4);
+		assertEquals(test.getSumRolled(), 10);
+	}
+	
+	@Test
+	public void testID() {
+		PlayerIcon test = new PlayerIcon(0, 0, 0);
+	}
+
+	@Test
+	public void testGetRolled() {
+		PlayerIcon test = new PlayerIcon(0, 0, 0);
+	}
+
+}

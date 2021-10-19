@@ -1,0 +1,14 @@
+package com.boardgame.GameWindow.Logic;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class SquareTest {
+
+	@Test
+	public void testUpdateButton() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,29 @@
+package com.boardgame.GameWindow.utils;
+
+import static org.junit.Assert.*;
+
+import javax.swing.JPanel;
+
+import org.junit.Test;
+
+public class ChatPanelTest {
+
+	@Test
+	public void testDisplay() {
+		ChatPanel test1 = new ChatPanel();
+		ChatPanel test2 = new ChatPanel();
+		ChatPanel test3 = new ChatPanel();
+		ChatPanel test4 = new ChatPanel();
+		JPanel ask1 = test1.display();
+		JPanel ask2 = test2.display();
+		JPanel ask3 = test3.display();
+		JPanel ask4 = test4.display();
+		assertSame(ask1, ask2);
+		assertSame(ask1, ask3);
+		assertSame(ask1, ask4);
+		assertSame(ask2, ask3);
+		assertSame(ask2, ask4);
+		assertSame(ask3, ask4);
+	}
+
+}

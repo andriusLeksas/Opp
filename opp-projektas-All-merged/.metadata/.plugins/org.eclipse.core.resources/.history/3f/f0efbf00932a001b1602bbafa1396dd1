@@ -1,0 +1,20 @@
+package com.boardgame.GameWindow.Logic.StragegyPatternMovement;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import com.boardgame.GameWindow.Logic.StragegyPatternMovement.BlueTankOperation;
+
+public class BlueTankOperationTest {
+
+	@Test
+	public void testDoOperation() {
+		BlueTankOperation test = new BlueTankOperation();
+		int ask = test.doOperation(5);
+		int ask2 = test.doOperation(1);
+		assertEquals(ask, 3);
+		assertEquals(ask2, 0);
+	}
+
+}

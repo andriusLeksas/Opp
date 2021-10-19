@@ -1,0 +1,29 @@
+package com.boardgame.GameWindow.Logic.AbstractFactory;
+
+import static org.junit.Assert.*;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+
+import org.junit.Test;
+
+public class RedTankTest {
+
+	@Test
+	public void testGetTank() throws IOException {
+		RedTank test = new RedTank();
+		RedTank test2 = new RedTank();
+		assertSame(test.getTank(), test.getTank());
+	}
+
+	@Test
+	public void testGetSpeed() {
+		RedTank test = new RedTank();
+		int ask = test.getSpeed();
+		assertEquals(ask, 1);
+	}
+
+}

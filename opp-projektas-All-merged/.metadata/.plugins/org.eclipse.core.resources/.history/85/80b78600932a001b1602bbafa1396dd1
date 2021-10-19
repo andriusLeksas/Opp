@@ -1,0 +1,16 @@
+package com.boardgame.GameWindow.Logic.StragegyPatternMovement;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class BlueCarOperationTest {
+
+	@Test
+	public void testDoOperation() {
+		BlueCarOperation test = new BlueCarOperation();
+		int ask = test.doOperation(5);
+		assertEquals(ask, 7);
+	}
+
+}

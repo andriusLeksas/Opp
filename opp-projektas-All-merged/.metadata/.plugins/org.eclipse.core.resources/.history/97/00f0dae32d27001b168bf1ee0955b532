@@ -1,0 +1,28 @@
+package com.boardgame.GameWindow.Factory_pattern;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class BlackMovementTest {
+
+	private BlackMovement asdasd = new BlackMovement();
+	@Test
+	public void testName() {
+		String testname1 = asdasd.getname();
+		assertEquals("black", testname1);
+		asdasd.setName("asdasd");
+		String testname2 = asdasd.getname();
+		assertEquals("black", testname2);
+	}
+
+	@Test
+	public void testSetTiles() {
+		int testname1 = asdasd.getTiles();
+		assertEquals(-9, testname1);
+		asdasd.setTiles(5);
+		int testname2 = asdasd.getTiles();
+		assertEquals(5, testname2);
+	}
+
+}

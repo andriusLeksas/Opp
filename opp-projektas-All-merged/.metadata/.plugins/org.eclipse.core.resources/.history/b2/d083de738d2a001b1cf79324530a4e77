@@ -1,0 +1,139 @@
+package com.boardgame.GameWindow.Logic;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class PlayerIconTest {
+
+	@Test
+	public void testPlayerIcon() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testIcon() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetDecorator() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSetDecorator() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testDecoratorCounter() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSetDecoratorCounter() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSetEventName() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetEventName() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSetEffectedTurns() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetEffectedTurns() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSetEffectedByEvent() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetEffectedByEvent() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSetIcon() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetIcon() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetCurrentX() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetCurrentY() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSumRolled() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetSumRolled() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSetSumRolled() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetID() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetRolled() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSetX() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSetY() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSetRolled() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSetID() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testMove() {
+		fail("Not yet implemented");
+	}
+
+}

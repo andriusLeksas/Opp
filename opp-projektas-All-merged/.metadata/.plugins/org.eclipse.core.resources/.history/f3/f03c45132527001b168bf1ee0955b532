@@ -1,0 +1,22 @@
+package com.boardgame.GameWindow.Factory_pattern;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class MovementEventTest {
+    private String name = "Booga";
+    private int tiles = 8;
+	@Test
+	void testSetName() {
+		this.name = "Ooga";
+		assertEquals("Ooga", this.name);
+	}
+
+	@Test
+	void testSetTiles() {
+		this.tiles = 12;
+		assertEquals(12, this.tiles);
+	}
+
+}

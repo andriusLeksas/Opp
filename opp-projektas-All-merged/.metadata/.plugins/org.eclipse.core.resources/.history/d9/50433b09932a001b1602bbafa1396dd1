@@ -1,0 +1,19 @@
+package com.boardgame.GameWindow.Logic;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class PathTest {
+
+	@Test
+	public void testAddIntIntJButtonBooleanMovementEvent() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testAddIntIntJButtonBooleanString() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.boardgame.GameWindow.utils;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class ChatPanelTest {
+
+	@Test
+	public void testDisplay() {
+		fail("Not yet implemented");
+	}
+
+}

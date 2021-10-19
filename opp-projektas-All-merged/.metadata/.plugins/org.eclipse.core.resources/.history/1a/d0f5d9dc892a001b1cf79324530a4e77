@@ -1,0 +1,14 @@
+package com.boardgame.GameWindow.Logic.StragegyPatternMovement;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class RedCarOperationTest {
+
+	@Test
+	public void testDoOperation() {
+		fail("Not yet implemented");
+	}
+
+}

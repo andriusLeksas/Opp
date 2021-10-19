@@ -1,0 +1,16 @@
+package com.boardgame.GameWindow.Logic.StragegyPatternMovement;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class BluePlaneOperationTest {
+
+	@Test
+	public void testDoOperation() {
+		BluePlaneOperation test = new BluePlaneOperation();
+		int ask = test.doOperation(5);
+		assertEquals(ask, 10);
+	}
+
+}

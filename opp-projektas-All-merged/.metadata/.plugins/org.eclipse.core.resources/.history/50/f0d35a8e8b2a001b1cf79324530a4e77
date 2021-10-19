@@ -1,0 +1,19 @@
+package com.boardgame.GameWindow.Logic.AbstractFactory;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class RedTankTest {
+
+	@Test
+	public void testGetTank() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetSpeed() {
+		fail("Not yet implemented");
+	}
+
+}

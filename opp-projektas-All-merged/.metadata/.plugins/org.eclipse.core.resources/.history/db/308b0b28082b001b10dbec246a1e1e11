@@ -1,0 +1,21 @@
+package com.boardgame.GameWindow.Logic;
+
+import static org.junit.Assert.*;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+
+import org.junit.Test;
+
+public class SquareTest {
+
+	@Test
+	public void testUpdateButton() {
+		JButton button = new JButton();
+		Square test = new Square(0, 0, button, false);
+		ImageIcon icon = new ImageIcon();
+		test.updateButton(icon);
+		assertNotEquals(test.returnButton(), null);
+	}
+
+}

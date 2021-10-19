@@ -1,0 +1,21 @@
+package com.boardgame.server;
+
+import static org.junit.Assert.*;
+
+import java.io.IOException;
+import java.net.Socket;
+
+import org.junit.Test;
+
+public class ClientHandlerTest {
+
+	@Test
+	public void testRun() throws IOException {
+		Socket testSock = new Socket();
+		ClientHandler[] clients = null;
+		ClientHandler test;
+		test = new ClientHandler(testSock, 0, clients);
+		test.run();
+	}
+
+}

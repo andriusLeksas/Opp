@@ -1,0 +1,18 @@
+package com.boardgame.GameWindow.utils;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class ChatPanelTest {
+
+	@Test
+	public void testDisplay() {
+		ChatPanel test1 = new ChatPanel();
+		ChatPanel test2 = new ChatPanel();
+		ChatPanel test3 = new ChatPanel();
+		ChatPanel test4 = new ChatPanel();
+		
+	}
+
+}

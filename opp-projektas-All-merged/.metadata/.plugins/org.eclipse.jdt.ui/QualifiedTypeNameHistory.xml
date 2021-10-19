@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.net.Socket"/>
+    <fullyQualifiedTypeName name="com.boardgame.GameWindow.Logic.DecoratorPattern.Player"/>
+    <fullyQualifiedTypeName name="com.boardgame.GameWindow.Logic.DecoratorPattern.PlayerDecorate"/>
+    <fullyQualifiedTypeName name="com.boardgame.GameWindow.Logic.DecoratorPattern.Playerlmpl"/>
+    <fullyQualifiedTypeName name="javax.swing.JButton"/>
+    <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
+    <fullyQualifiedTypeName name="com.boardgame.GameWindow.Logic.Square"/>
+</qualifiedTypeNameHistroy>
