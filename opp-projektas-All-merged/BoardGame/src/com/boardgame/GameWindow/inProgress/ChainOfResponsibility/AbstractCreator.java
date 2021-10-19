@@ -1,4 +1,4 @@
-package com.boardgame.GameWindow.Logic.ChainOfResponsibility;
+package com.boardgame.GameWindow.inProgress.ChainOfResponsibility;
 
 public abstract class AbstractCreator {
  

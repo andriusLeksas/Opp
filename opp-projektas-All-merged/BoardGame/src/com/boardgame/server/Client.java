@@ -16,11 +16,11 @@ import com.boardgame.GameWindow.Logic.BoardLayout;
 import com.boardgame.GameWindow.Logic.PlayerIcon;
 import com.boardgame.GameWindow.Logic.Square;
 import com.boardgame.GameWindow.Logic.SingletonPattern.ErrorLogger;
-import com.boardgame.GameWindow.Logic.StatePattern.StepsCounter;
+import com.boardgame.GameWindow.inProgress.StatePattern.StepsCounter;
 import com.boardgame.GameWindow.utils.DicePanel;
 import com.boardgame.GameWindow.utils.Die;
-
-
+import com.boardgame.server.inProgress.InterpreterContext;
+import com.boardgame.server.inProgress.ProxyButton;
 
 
 public class Client extends JPanel{
@@ -73,7 +73,7 @@ public class Client extends JPanel{
 							game.pack();
 							game.setMinimumSize(game.getSize());
        						game.setLocationRelativeTo(null);
-        					game.setResizable(false);
+        					game.setResizable(true);
 							game.setVisible(true);
 							playerID = ID;
 						String line;
@@ -169,6 +169,7 @@ public class Client extends JPanel{
 					if(check == '@')
 					{
 						char Rolled = finalArg.toString().charAt(1);
+						//Rolled = (char)(Math.random()*(7-1+1)+1);
 						char ID = finalArg.toString().charAt(3);
 						textArea.append("Player" + ID + " rolled " + Rolled + "!");
                     	textArea.append("\n");
@@ -357,6 +358,8 @@ public class Client extends JPanel{
 			this.player1.setSumRolled(player[0]);
 			//this.player1.setX(player[1]);
 			//this.player1.setY(player[2]);
+			//int a = (int)(Math.random()*(7-1+1)+1);
+
 			this.player1.setRolled(0);
 			//player1.setSumRolled(player1.getSumRolled()-p1);
 			boardLayout.initializeBoard(player1, player2, 0);
@@ -365,8 +368,7 @@ public class Client extends JPanel{
 		}
 		else{
 			this.player2.setSumRolled(player[0]);
-			//this.player2.setX(player[1]);
-			//this.player2.setY(player[2]);
+			//int a = (int)(Math.random()*(7-1+1)+1);
 			this.player2.setRolled(0);
 			//player2.setSumRolled(player2.getSumRolled()-p2);
 			boardLayout.initializeBoard(player1, player2, 1);
@@ -411,13 +413,16 @@ public class Client extends JPanel{
 					char Rolled = finalArg.toString().charAt(1);
 					char ID = finalArg.toString().charAt(3);
 					int Rl = Character.getNumericValue(Rolled);
+					//int Rl = (int)(Math.random()*(7-1+1)+1);
 					int id = Character.getNumericValue(ID);
 					if(id == 0)
 					{
+						//Rl = (int)(Math.random()*(7-1+1)+1);
 						player1.setRolled(Rl);
 					}
 					else
 					{
+						//Rl = (int)(Math.random()*(7-1+1)+1);
 						player2.setRolled(Rl);
 					}
 					boardLayout.initializeBoard(player1, player2, id);

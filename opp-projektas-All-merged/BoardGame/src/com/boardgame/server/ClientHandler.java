@@ -2,10 +2,10 @@ package com.boardgame.server;
 
 import java.io.*;
 import java.net.*;
-import java.util.ArrayList;
 
-import com.boardgame.GameWindow.Logic.Mediator.ChatRoom;
-import com.boardgame.GameWindow.Logic.Mediator.User;
+import com.boardgame.GameWindow.inProgress.Mediator.ChatRoom;
+import com.boardgame.GameWindow.inProgress.Mediator.User;
+import com.boardgame.server.inProgress.InterpreterContext;
 
 
 public class ClientHandler extends Thread{

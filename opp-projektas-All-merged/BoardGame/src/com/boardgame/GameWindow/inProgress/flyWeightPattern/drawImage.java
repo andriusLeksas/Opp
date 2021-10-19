@@ -1,4 +1,4 @@
-package com.boardgame.GameWindow.Logic.flyWeightPattern;
+package com.boardgame.GameWindow.inProgress.flyWeightPattern;
 
 import java.awt.Image;
 import javax.imageio.ImageIO;

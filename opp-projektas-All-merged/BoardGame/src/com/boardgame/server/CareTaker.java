@@ -1,5 +1,7 @@
 package com.boardgame.server;
 
+import com.boardgame.server.inProgress.memento;
+
 import java.util.*;
 
 public class CareTaker {

@@ -1,4 +1,4 @@
-package com.boardgame.GameWindow.Logic.Mediator;
+package com.boardgame.GameWindow.inProgress.Mediator;
 
 public class test {
 

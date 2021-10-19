@@ -15,8 +15,8 @@ import com.boardgame.GameWindow.Logic.DecoratorPattern.Playerlmpl;
 import com.boardgame.GameWindow.Logic.DecoratorPattern.ThreeStars;
 import com.boardgame.GameWindow.Logic.DecoratorPattern.TwoStars;
 import com.boardgame.GameWindow.Logic.StragegyPatternMovement.*;
-import com.boardgame.GameWindow.Logic.flyWeightPattern.ImageFactory;
-import com.boardgame.GameWindow.Logic.flyWeightPattern.drawImage;
+import com.boardgame.GameWindow.inProgress.flyWeightPattern.ImageFactory;
+import com.boardgame.GameWindow.inProgress.flyWeightPattern.drawImage;
 
 
 public class PlayerIcon implements FasadeForPlayer {
@@ -243,12 +243,11 @@ public class PlayerIcon implements FasadeForPlayer {
         else{
             totalRolled+=sum;
         }
-
-        
     }
 
     public int getSumRolled()
     {
+
         return totalRolled;
     }
     public void setSumRolled(int sum)

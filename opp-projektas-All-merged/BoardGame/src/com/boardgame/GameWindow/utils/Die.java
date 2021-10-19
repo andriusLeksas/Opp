@@ -30,7 +30,7 @@ roll(); // Set to random initial value
 @return Result of roll (1-6).
 */
 public int roll() {
-int val = random.nextInt(1) + 1; // Range 1-6
+int val = (int)(Math.random()*(6-1+1)+1); // Range 1-6         totalRolled = (int)(Math.random()*(7-1+1)+1);
 setValue(val);
 return val;
 }//end roll

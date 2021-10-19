@@ -1,4 +1,4 @@
-package com.boardgame.GameWindow.Logic.IteratorPattern;
+package com.boardgame.GameWindow.inProgress.IteratorPattern;
 
 import javax.swing.JButton;
 

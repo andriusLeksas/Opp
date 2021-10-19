@@ -1,5 +1,7 @@
 package com.boardgame.server;
 
+import com.boardgame.server.inProgress.InterpreterContext;
+
 public class makeChatExp implements Expression{
     private String value;
     private int id;

@@ -15,9 +15,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import com.boardgame.GameWindow.Logic.Mediator.ChatRoom;
-import com.boardgame.GameWindow.Logic.Mediator.User;
-
 
 public class ChatPanel extends JPanel {
 

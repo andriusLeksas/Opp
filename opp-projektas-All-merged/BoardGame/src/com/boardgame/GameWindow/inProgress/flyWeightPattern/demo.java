@@ -1,4 +1,4 @@
-package com.boardgame.GameWindow.Logic.flyWeightPattern;
+package com.boardgame.GameWindow.inProgress.flyWeightPattern;
 
 public class demo {
     

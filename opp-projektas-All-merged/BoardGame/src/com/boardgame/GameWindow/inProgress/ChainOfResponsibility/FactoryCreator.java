@@ -1,4 +1,4 @@
-package com.boardgame.GameWindow.Logic.ChainOfResponsibility;
+package com.boardgame.GameWindow.inProgress.ChainOfResponsibility;
 
 import com.boardgame.GameWindow.Factory_pattern.MovementEvent;
 import com.boardgame.GameWindow.Factory_pattern.MovementEventFactory;

@@ -1,12 +1,15 @@
-package com.boardgame.server;
+package com.boardgame.server.inProgress;
 
 import com.boardgame.GameWindow.utils.DicePanel;
+import com.boardgame.server.Buttons;
 import com.boardgame.server.Client.GameFrame;
+import com.boardgame.server.RealButton;
+
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
-public class ProxyButton implements Buttons{
+public class ProxyButton implements Buttons {
     
     private RealButton realButton;
     private String name;

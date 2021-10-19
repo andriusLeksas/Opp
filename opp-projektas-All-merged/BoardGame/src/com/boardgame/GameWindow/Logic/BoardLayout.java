@@ -9,9 +9,8 @@ import com.boardgame.GameWindow.Logic.AbstractFactory.Car;
 import com.boardgame.GameWindow.Logic.AbstractFactory.FactoryProvider;
 import com.boardgame.GameWindow.Logic.AbstractFactory.Plane;
 import com.boardgame.GameWindow.Logic.AbstractFactory.Tank;
-import com.boardgame.GameWindow.Logic.IteratorPattern.BoardRepository;
-import com.boardgame.GameWindow.Logic.IteratorPattern.Iterator;
-
+import com.boardgame.GameWindow.inProgress.IteratorPattern.BoardRepository;
+import com.boardgame.GameWindow.inProgress.IteratorPattern.Iterator;
 
 
 public class BoardLayout {
@@ -162,7 +161,6 @@ public class BoardLayout {
                     player1.setEventName("");
                 }
             }
-
             player1.sumRolled(player1.getRolled());
             Square newSquare = path.getSquare(player1.getSumRolled());
             player1.setX(newSquare.returnX());

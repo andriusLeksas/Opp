@@ -1,4 +1,4 @@
-package com.boardgame.GameWindow.Logic.flyWeightPattern;
+package com.boardgame.GameWindow.inProgress.flyWeightPattern;
 
 import java.io.IOException;
 import java.util.HashMap;

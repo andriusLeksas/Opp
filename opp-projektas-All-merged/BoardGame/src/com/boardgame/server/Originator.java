@@ -1,6 +1,6 @@
 package com.boardgame.server;
 
-import com.boardgame.GameWindow.Logic.PlayerIcon;
+import com.boardgame.server.inProgress.memento;
 
 public class Originator {
     private int[] state;

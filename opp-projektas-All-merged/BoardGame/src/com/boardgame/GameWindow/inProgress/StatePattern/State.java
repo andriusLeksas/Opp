@@ -1,4 +1,4 @@
-package com.boardgame.GameWindow.Logic.StatePattern;
+package com.boardgame.GameWindow.inProgress.StatePattern;
 
 public interface State {
 
