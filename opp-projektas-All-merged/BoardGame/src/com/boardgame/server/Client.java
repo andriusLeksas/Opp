@@ -67,7 +67,7 @@ public class Client extends JPanel{
 							cb.createPlayer(ID);
 							game.add(cb.getGui());
 							game.add(frame, BorderLayout.EAST);
-							game.setTitle("Untitled Board Game");
+							game.setTitle("StrategyBoardGame: Player " +  ID);
 							game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 							game.setLocationByPlatform(true);
 							game.pack();
