@@ -34,7 +34,6 @@ public final class ErrorLogger{
 			//Create the directory 
 			System.err.println("INFO: Creating new logs directory in " + env);
 			logsFolder.mkdir();
-			
 		}
 
 		//Get the current date and time
