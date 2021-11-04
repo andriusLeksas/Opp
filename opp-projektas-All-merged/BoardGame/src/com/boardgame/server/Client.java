@@ -199,6 +199,17 @@ public class Client extends JPanel{
 	private Buttons roll;
 	private Buttons undo;
 	private Buttons end;
+
+	private Buttons roll1;
+	private Buttons roll2;
+	private Buttons roll3;
+	private Buttons roll4;
+	private Buttons roll5;
+	private Buttons roll6;
+
+
+
+
 	private StepsCounter counter = new StepsCounter(30);
 	private JButton stepsLeft = new JButton("30");
 	private final int maxSteps = 30;
@@ -255,9 +266,13 @@ public class Client extends JPanel{
 	//dice.add(undoButton, BorderLayout.CENTER);
 	//dice.add(endButton, BorderLayout.EAST);
 	roll = new ProxyButton("Roll", dice);
+
+
+	roll2 = new ProxyButton("Roll", dice);
 	undo = new ProxyButton("Undo", dice);
 	end = new ProxyButton("End", dice);
 	roll.addToGame(this);
+	//roll 1 dice
 	undo.addToGame(this);
 	end.addToGame(this);
 	dice.add(dicePanel , BorderLayout.SOUTH);
@@ -333,6 +348,8 @@ public class Client extends JPanel{
 				Board.repaint();
 				_left.roll();
 				P1Rolled += _left.getValue();
+				P1Rolled += _left.getValue();
+
 				//chatAccess.send("@" + String.valueOf(_left.getValue()) + " " + String.valueOf(player_ID));
 				update("@" + String.valueOf(_left.getValue()) + " " + String.valueOf(player_ID));
 				roll.off();

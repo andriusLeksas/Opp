@@ -12,9 +12,9 @@ public final class ErrorLogger{
 	//Implements a singleton logger instance
 	private static final ErrorLogger instance = new ErrorLogger();
 
-	//Retrieve the execution directory. Note that this is whereever this process was launched
+	//Retrieve the execution directory. Note that this is wherever this process was launched
 	public String logname = "SingletonPattern";
-	protected String env = "user.dir";
+	protected String env = "";
 	private static File logFile;
 
 	public static ErrorLogger getInstance(){
@@ -44,12 +44,13 @@ public final class ErrorLogger{
 		logname =  logname + '-' +  dateFormat.format(cal.getTime()) + ".log";
 		ErrorLogger.logFile = new File(logsFolder.getName(),logname);
 		try{
+			//logFile.mkdirs();
 			if(logFile.createNewFile()){
 				//New file made
 				System.err.println("INFO: Creating new log file");	
 			}
 		}catch(IOException e){
-			System.err.println("ERROR: Cannot create log file");
+			System.err.println(e);
 			System.exit(1);
 		}
 	}
@@ -74,8 +75,7 @@ public final class ErrorLogger{
 	}
 
 	public static void main(String[] args) {
-		
-        ErrorLogger.log("This is a message");
+
         System.out.println("ok");
 	}
 

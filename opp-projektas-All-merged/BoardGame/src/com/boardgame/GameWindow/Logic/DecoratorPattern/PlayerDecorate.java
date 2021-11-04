@@ -1,5 +1,5 @@
 package com.boardgame.GameWindow.Logic.DecoratorPattern;
-public abstract class PlayerDecorate implements Player{
+public class PlayerDecorate implements Player{
     
     private Player player;
     
@@ -10,6 +10,7 @@ public abstract class PlayerDecorate implements Player{
 	// standard constructors
     @Override
     public String decorate() {
+        System.out.println("Decorator pattern activated");
         return player.decorate();
     }
 }

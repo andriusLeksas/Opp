@@ -35,7 +35,7 @@ System.out.println(_left.getValue());
 JPanel dicePanel = new JPanel();
 dicePanel.setLayout(new GridLayout(1, 2, 4, 0));
 dicePanel.add(_left);
-System.out.println(Rolled);
+//System.out.println(Rolled);
 //--- Add components to content pane
 
 this.setLayout(new BorderLayout());

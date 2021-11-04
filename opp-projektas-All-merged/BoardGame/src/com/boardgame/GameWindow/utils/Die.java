@@ -34,6 +34,12 @@ int val = (int)(Math.random()*(6-1+1)+1); // Range 1-6         totalRolled = (in
 setValue(val);
 return val;
 }//end roll
+
+public int roll1() {
+    int val = 1; // Range 1-6         totalRolled = (int)(Math.random()*(7-1+1)+1);
+    setValue(val);
+    return val;
+}//end roll
 //================================================== method getValue
 /** Returns result of last roll.*/
 public int getValue() {
