@@ -14,6 +14,7 @@ public class newMovement {
     }
 
     public int executeStrategy(int rolled){
+        System.out.println("Strategy pattern excecuted");
         return strategy.doOperation(rolled);
     }
 

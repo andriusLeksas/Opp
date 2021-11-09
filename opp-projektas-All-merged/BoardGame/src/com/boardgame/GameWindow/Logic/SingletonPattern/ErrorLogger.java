@@ -10,7 +10,7 @@ import java.util.Calendar;
 
 public final class ErrorLogger{
 	//Implements a singleton logger instance
-	private static final ErrorLogger instance = new ErrorLogger();
+	public static final ErrorLogger instance = new ErrorLogger();
 
 	//Retrieve the execution directory. Note that this is wherever this process was launched
 	public String logname = "SingletonPattern";
@@ -55,7 +55,7 @@ public final class ErrorLogger{
 		}
 	}
 
-	private ErrorLogger(){
+	public ErrorLogger(){
 		if (instance != null){
 			//Prevent Reflection
 			throw new IllegalStateException("Cannot instantiate a new singleton instance of log");

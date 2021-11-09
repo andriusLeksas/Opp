@@ -4,6 +4,7 @@ import com.boardgame.GameWindow.Logic.PlayerIcon;
 import com.boardgame.server.Client.GameFrame;
 
 public class Move implements Command{
+
     private GameFrame frame;
     private CareTaker saver = new CareTaker();
     private Originator worker = new Originator();

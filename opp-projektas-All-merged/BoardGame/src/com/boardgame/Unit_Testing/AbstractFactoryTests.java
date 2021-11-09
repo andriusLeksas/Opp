@@ -100,6 +100,6 @@ class AbstractFactoryTests {
     void getRedPlaneSpeedTest(){
         //speed = 2
         RedPlane redPlane = new RedPlane();
-        assertEquals(2, redPlane.getSpeed());
+        assertEquals(3, redPlane.getSpeed());
     }
 }
