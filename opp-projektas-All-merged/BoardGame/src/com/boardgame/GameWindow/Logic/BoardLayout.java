@@ -32,12 +32,8 @@ public class BoardLayout {
         int down = 0;
         Insets buttonMargin = new Insets(0,0,0,0);
         Scanner in = new Scanner(System.in);
-        System.out.println("Choose tank sprite enter 1(RedTank), 2(BLueTank):");
+        System.out.println("Choose object sprite enter 1(Red), 2(BLue):");
         int choice = in.nextInt();
-        System.out.println("Choose car sprite enter 1(RedCar), 2(BLueCar):");
-        int choice2 = in.nextInt();
-        System.out.println("Choose plane sprite enter 1(RedPlane), 2(BLuePlane):");
-        int choice3 = in.nextInt();
 
         for (int ii = 0; ii < Dimensions; ii++) {
             for (int jj = 0; jj < Dimensions; jj++) {
@@ -62,11 +58,11 @@ public class BoardLayout {
                     }
                     else if (ii == 12 && jj == 12)
                     {
-                        if(choice2 == 1){
+                        if(choice == 1){
                             Car red = (Car)vehciles.getFactory("Car").create("RedCar");
                             b.setIcon(red.getCar());
                             path.add(right, down, b, true, "RedCar");
-                        }else if(choice2 == 2){
+                        }else if(choice == 2){
                             Car blue = (Car)vehciles.getFactory("Car").create("BlueCar");
                             b.setIcon(blue.getCar());
                             path.add(right, down, b, true, "BlueCar");
@@ -75,11 +71,11 @@ public class BoardLayout {
                     }
                     else if (ii == 8 && jj == 8)
                     {
-                        if(choice3 == 1){
+                        if(choice == 1){
                             Plane red = (Plane)vehciles.getFactory("Plane").create("RedPlane");
                             b.setIcon(red.getPlane());
                             path.add(right, down, b, true, "RedPlane");
-                        }else if(choice3 == 2){
+                        }else if(choice == 2){
                             Plane blue = (Plane)vehciles.getFactory("Plane").create("BluePlane");
                             b.setIcon(blue.getPlane());
                             path.add(right, down, b, true, "BluePlane");

@@ -288,7 +288,7 @@ public class PlayerIcon implements FasadeForPlayer {
 
     @Override
     public void Move(String eventName, Path path) {
-        System.out.println("Facade in action");
+        System.out.println("Facade calling move function");
         FactoryProvider tanks = new FactoryProvider();
         MovementEvent event = null;
         MovementEventFactory factory = new MovementEventFactory();
