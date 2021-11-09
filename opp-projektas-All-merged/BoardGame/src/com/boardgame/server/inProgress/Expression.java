@@ -1,4 +1,4 @@
-package com.boardgame.server;
+package com.boardgame.server.inProgress;
 
 import com.boardgame.server.inProgress.InterpreterContext;
 

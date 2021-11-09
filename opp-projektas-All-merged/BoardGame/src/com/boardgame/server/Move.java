@@ -1,7 +1,8 @@
 package com.boardgame.server;
 
-import com.boardgame.GameWindow.Logic.PlayerIcon;
 import com.boardgame.server.Client.GameFrame;
+import com.boardgame.server.inProgress.CareTaker;
+import com.boardgame.server.inProgress.Originator;
 
 public class Move implements Command{
 

@@ -1,5 +1,6 @@
 package com.boardgame.server;
 
+import com.boardgame.server.inProgress.Expression;
 import com.boardgame.server.inProgress.InterpreterContext;
 
 public class makeCommandExp implements Expression {

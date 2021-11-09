@@ -21,7 +21,7 @@ public class ImageFactory {
                 e.printStackTrace();
             }
          pathMap.put(path, image);
-         System.out.println("Creating image of path : " + path);
+         //System.out.println("Creating image of path : " + path);
       }
       return image;
    }

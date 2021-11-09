@@ -97,10 +97,19 @@ public class BoardLayout {
                         b.setBackground(Color.RED);
                         path.add(right, down, b, true,"red");
                     }
+                    else if (ii == 4 && jj == 4)
+                    {
+                        b.setBackground(Color.PINK);
+                        path.add(right, down, b, true,"Star");
+                    }
                     else if (ii == 6 && jj == 6)
                     {
                         b.setBackground(Color.blue);
                         path.add(right, down, b, true,"blue");
+                    }else if (ii == 15 && jj == 15)
+                    {
+                        b.setBackground(Color.green);
+                        path.add(right, down, b, true,"green");
                     }
                     else{
                         b.setBackground(Color.YELLOW);

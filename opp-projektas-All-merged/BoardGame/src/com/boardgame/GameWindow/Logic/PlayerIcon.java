@@ -298,6 +298,7 @@ public class PlayerIcon implements FasadeForPlayer {
             setEffectedByEvent(true);
             setEffectedTurns(2);
             setEventName(eventName);
+            System.out.println("Tank event affected 2 turns");
         }
         else if(eventName.endsWith("Plane")){
             Plane plane = (Plane)tanks.getFactory("Plane").create(eventName);
@@ -305,6 +306,7 @@ public class PlayerIcon implements FasadeForPlayer {
             setEffectedByEvent(true);
             setEffectedTurns(2);
             setEventName(eventName);
+            System.out.println("Plane event affected 2 turns");
         }
         else if(eventName.endsWith("Car")){
             Car car = (Car)tanks.getFactory("Car").create(eventName);
@@ -312,23 +314,27 @@ public class PlayerIcon implements FasadeForPlayer {
             setEffectedByEvent(true);
             setEffectedTurns(2);
             setEventName(eventName);
+            System.out.println("Car event affected 2 turns");
         }
         else if(eventName.endsWith("Star"))
         {
            if(DecoratorCounter() == 0)
            {
-             StarDecorator = new OneStar(StarDecorator);  
-            setDecoratorCounter(1);
+               StarDecorator = new OneStar(StarDecorator);
+               setDecoratorCounter(1);
+               System.out.println("Decorator triggered");
            }
            else if(DecoratorCounter() == 1)
            {
                 StarDecorator = new TwoStars(StarDecorator);  
                 setDecoratorCounter(2);
+                System.out.println("Decorator triggered second time");
            }
            else if (DecoratorCounter() == 2)
            {
-              StarDecorator = new ThreeStars(StarDecorator);  
+               StarDecorator = new ThreeStars(StarDecorator);
                setDecoratorCounter(3);
+               System.out.println("Decorator triggered third time");
            }  
                
         }       

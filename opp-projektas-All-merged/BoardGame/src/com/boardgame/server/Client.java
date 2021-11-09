@@ -34,6 +34,7 @@ public class Client extends JPanel{
 
 		public void attach(Observer o) {
 			list.add(o);
+			System.out.println("Observer attached and will update objects");
 		}
 
 		public void detach(Observer o) {
