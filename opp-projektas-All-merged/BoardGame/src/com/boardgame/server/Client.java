@@ -16,16 +16,16 @@ import com.boardgame.GameWindow.Logic.BoardLayout;
 import com.boardgame.GameWindow.Logic.PlayerIcon;
 import com.boardgame.GameWindow.Logic.Square;
 import com.boardgame.GameWindow.Logic.SingletonPattern.ErrorLogger;
-import com.boardgame.GameWindow.inProgress.StatePattern.StepsCounter;
+import NotYetDone.inProgress.StatePattern.StepsCounter;
 import com.boardgame.GameWindow.utils.DicePanel;
 import com.boardgame.GameWindow.utils.Die;
-import com.boardgame.server.inProgress.InterpreterContext;
-import com.boardgame.server.inProgress.ProxyButton;
+import NotYetDone.inProgress.inProgress2.InterpreterContext;
+import NotYetDone.inProgress.inProgress2.ProxyButton;
 
 
 public class Client extends JPanel{
 
-	static class GameAccess implements Subject {
+	public static class GameAccess implements Subject {
 		private Socket socket;
 		private OutputStream outputStream;
 		private ArrayList<Observer> list = new ArrayList<>();
@@ -113,7 +113,7 @@ public class Client extends JPanel{
         }
 	}
 
-	static class ChatFrame extends JPanel implements Observer {
+	public static class ChatFrame extends JPanel implements Observer {
 		private JTextArea textArea;
         private JTextField inputTextField;
         private JButton sendButton;

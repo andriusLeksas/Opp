@@ -3,9 +3,9 @@ package com.boardgame.server;
 import java.io.*;
 import java.net.*;
 
-import com.boardgame.GameWindow.inProgress.Mediator.ChatRoom;
-import com.boardgame.GameWindow.inProgress.Mediator.User;
-import com.boardgame.server.inProgress.InterpreterContext;
+import NotYetDone.inProgress.Mediator.ChatRoom;
+import NotYetDone.inProgress.Mediator.User;
+import NotYetDone.inProgress.inProgress2.InterpreterContext;
 
 
 public class ClientHandler extends Thread{

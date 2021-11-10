@@ -1,7 +1,7 @@
 package com.boardgame.server;
 
-import com.boardgame.server.inProgress.Expression;
-import com.boardgame.server.inProgress.InterpreterContext;
+import NotYetDone.inProgress.inProgress2.Expression;
+import NotYetDone.inProgress.inProgress2.InterpreterContext;
 
 public class makeChatExp implements Expression {
     private String value;

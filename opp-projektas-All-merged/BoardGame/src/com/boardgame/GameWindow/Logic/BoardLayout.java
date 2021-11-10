@@ -9,8 +9,8 @@ import com.boardgame.GameWindow.Logic.AbstractFactory.Car;
 import com.boardgame.GameWindow.Logic.AbstractFactory.FactoryProvider;
 import com.boardgame.GameWindow.Logic.AbstractFactory.Plane;
 import com.boardgame.GameWindow.Logic.AbstractFactory.Tank;
-import com.boardgame.GameWindow.inProgress.IteratorPattern.BoardRepository;
-import com.boardgame.GameWindow.inProgress.IteratorPattern.Iterator;
+import NotYetDone.inProgress.IteratorPattern.BoardRepository;
+import NotYetDone.inProgress.IteratorPattern.Iterator;
 
 
 public class BoardLayout {
@@ -27,7 +27,6 @@ public class BoardLayout {
 
     public void fillMatrix()
     {
-
         int right = 0;
         int down = 0;
         Insets buttonMargin = new Insets(0,0,0,0);
@@ -146,7 +145,6 @@ public class BoardLayout {
                 // boardSquares[index++] = square;
                 boardIterator.addSquare(square);
                 Board.add(b);
-
             }
         }
     }
