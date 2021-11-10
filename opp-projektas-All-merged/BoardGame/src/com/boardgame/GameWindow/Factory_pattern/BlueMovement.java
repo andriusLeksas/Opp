@@ -7,8 +7,6 @@ public class BlueMovement extends MovementEvent{
         setTiles(-3);
         System.out.println("Factory_Pattern player moves back 3 tiles");
     }
-
-
 }
 
 

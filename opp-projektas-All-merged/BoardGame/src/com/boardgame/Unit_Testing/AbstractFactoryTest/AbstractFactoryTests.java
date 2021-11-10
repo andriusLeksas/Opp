@@ -1,13 +1,11 @@
-package com.boardgame.Unit_Testing;
+package com.boardgame.Unit_Testing.AbstractFactoryTest;
 
 import com.boardgame.GameWindow.Logic.AbstractFactory.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import javax.swing.ImageIcon;
-import static org.junit.Assert.assertThat;
-import static org.hamcrest.CoreMatchers.instanceOf;
+import javax.swing.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 

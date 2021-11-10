@@ -6,6 +6,7 @@ public class test {
 		MovementEventFactory f = new MovementEventFactory();
 
 		MovementEvent event= f.makeMovementEvent("red");
+
 		System.out.println("name: "+event.getname()+" tiles :"+event.getTiles());
 
 		 event= f.makeMovementEvent("blue");

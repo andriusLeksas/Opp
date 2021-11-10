@@ -1,4 +1,4 @@
-package com.boardgame.Unit_Testing;
+package com.boardgame.Unit_Testing.FactoryPatternTests;
 
 import com.boardgame.GameWindow.Factory_pattern.BlueMovement;
 import com.boardgame.GameWindow.Factory_pattern.BlackMovement;

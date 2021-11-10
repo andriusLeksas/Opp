@@ -10,7 +10,7 @@ public class BluePlaneOperation implements Strategy {
 
         FactoryProvider vehicles = new FactoryProvider();
         Plane blue = (Plane)vehicles.getFactory("Plane").create("BluePlane"); 
-        return rolled * blue.getSpeed() ;
+        return rolled * blue.getSpeed();
     }
     
 }
