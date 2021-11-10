@@ -1,45 +1,41 @@
 package com.boardgame.Unit_Testing;
 
-import com.boardgame.GameWindow.Factory_pattern.MovementEvent;
-import com.boardgame.GameWindow.Factory_pattern.MovementEventFactory;
 import com.boardgame.GameWindow.Logic.Path;
-import com.boardgame.GameWindow.Logic.Square;
 import org.junit.jupiter.api.Test;
+
+import java.lang.reflect.Field;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 class PathTest {
 
-    private Square[] path;
-    private int index = 0;
-    private boolean haspath = false;
-    MovementEventFactory fac = new MovementEventFactory();
-    MovementEvent event= fac.makeMovementEvent("red");
+    Path path = new Path(5);
+    int index = 5;
 
     @Test
-    void addTest() {
-
+    void add() {
     }
 
     @Test
-    void testAddTest() {
+    void testAdd() {
     }
 
     @Test
-    void printTest() {
-        Path p = new Path(5);
-        index = 5;
-        //path = new Square[5];
-        //assert(p.Print());
+    void getSquare() throws NoSuchFieldException, IllegalAccessException {
+        Field index = Path.class.getDeclaredField("index");
+        index.setAccessible(true);
+        assertNotNull(index);
     }
 
     @Test
-    void getSquareTest() {
+    void hasPath() {
+
+        assertFalse(path.hasPath());
     }
 
     @Test
-    void hasPathTest() {
-    }
-
-    @Test
-    void sethasPathTest() {
+    void sethasPath() {
+        path.SethasPath();
+        assertTrue(path.hasPath());
     }
 }
