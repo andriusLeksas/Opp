@@ -2,7 +2,7 @@ package NotYetDone.inProgress.inProgress2;
 
 import com.boardgame.GameWindow.utils.DicePanel;
 import com.boardgame.server.Buttons;
-import com.boardgame.server.Client.GameFrame;
+import com.boardgame.server.ClientClasses.Client.GameFrame;
 import com.boardgame.server.RealButton;
 
 import javax.swing.JButton;

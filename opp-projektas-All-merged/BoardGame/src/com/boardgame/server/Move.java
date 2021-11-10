@@ -1,6 +1,6 @@
 package com.boardgame.server;
 
-import com.boardgame.server.Client.GameFrame;
+import com.boardgame.server.ClientClasses.Client.GameFrame;
 import NotYetDone.inProgress.inProgress2.CareTaker;
 import NotYetDone.inProgress.inProgress2.Originator;
 

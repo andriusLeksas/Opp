@@ -20,7 +20,6 @@ public class drawImage implements Shape{
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-      		
     }
 
     public void setSizeX(int sizeX) {

@@ -2,8 +2,6 @@ package com.boardgame.server;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.boardgame.server.Client.GameFrame;
-
 public class CommandHandler {
     private List<Command> commandList = new ArrayList<Command>();
 

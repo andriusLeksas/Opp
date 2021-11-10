@@ -4,10 +4,8 @@ import java.awt.BorderLayout;
 
 import javax.swing.JButton;
 
-import com.boardgame.GameWindow.Logic.BoardLayout;
 import com.boardgame.GameWindow.utils.DicePanel;
-import com.boardgame.server.Client.GameFrame;
-import java.awt.event.ActionListener;
+import com.boardgame.server.ClientClasses.Client.GameFrame;
 
 public class RealButton implements Buttons {
     
