@@ -15,7 +15,7 @@ class MoveTest {
         Move m = Mockito.mock(Move.class);
         Mockito.doNothing().when(m).execute();
         m.execute();
-        Mockito.verify(m);
+        Mockito.verify(m).execute();
     }
 
     @Test
@@ -23,6 +23,6 @@ class MoveTest {
         Move m = Mockito.mock(Move.class);
         Mockito.doNothing().when(m).undo();
         m.undo();
-        Mockito.verify(m);
+        Mockito.verify(m).undo();
     }
 }
