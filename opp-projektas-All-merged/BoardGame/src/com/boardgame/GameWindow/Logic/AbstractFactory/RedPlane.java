@@ -29,6 +29,6 @@ public class RedPlane implements Plane{
     @Override
     public int getSpeed() {
         // TODO Auto-generated method stub
-        return 3;
+        return 2;
     }
 }

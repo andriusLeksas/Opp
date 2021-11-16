@@ -163,6 +163,7 @@ public class Client extends JPanel{
 
 		/** Updates the UI depending on the Object argument */		
 		public void update(Object arg) {
+
 			final Object finalArg = arg;
 			SwingUtilities.invokeLater(new Runnable() {
 				public void run() {
@@ -170,9 +171,12 @@ public class Client extends JPanel{
 					if(check == '@')
 					{
 						char Rolled = finalArg.toString().charAt(1);
+						char Score = finalArg.toString().charAt(1);
 						//Rolled = (char)(Math.random()*(7-1+1)+1);
 						char ID = finalArg.toString().charAt(3);
+
 						textArea.append("Player" + ID + " rolled " + Rolled + "!");
+						textArea.append("Player" + ID + " score " + Score + "!");
                     	textArea.append("\n");
 					}
 					else if(check != '$')
@@ -254,7 +258,7 @@ public class Client extends JPanel{
 	//undoButton.addActionListener(this);
 	//endButton.setFont(new Font("Sansserif", Font.PLAIN, 20));
 	//endButton.addActionListener(this);
-	System.out.println(_left.getValue());
+//	System.out.println(_left.getValue());
 	//--- Create panel for two dice
 	JPanel dicePanel = new JPanel();
 	dicePanel.setLayout(new GridLayout(1, 2, 4, 0));
@@ -346,6 +350,7 @@ public class Client extends JPanel{
 	public void move(){
 		if(player_ID == 0)
 			{
+
 				Board.repaint();
 				_left.roll();
 				P1Rolled += _left.getValue();
@@ -374,6 +379,8 @@ public class Client extends JPanel{
 	public void undo(int[] player, int id){
 		if(id == 0){
 			this.player1.setSumRolled(player[0]);
+
+
 			//this.player1.setX(player[1]);
 			//this.player1.setY(player[2]);
 			//int a = (int)(Math.random()*(7-1+1)+1);
@@ -422,6 +429,7 @@ public class Client extends JPanel{
 		return this;
 	}
 	public void update(Object arg) {
+
 		final Object finalArg = arg;
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
@@ -449,8 +457,13 @@ public class Client extends JPanel{
 					roll.on();
 					end.on();
 				}
+
 			}
+
 		});
+//		System.out.println("Player 1 score " + this.player1.getSumRolled());
+//		System.out.println("Player 2 score " + this.player2.getSumRolled());
+
 	}
 		
 	}

@@ -22,8 +22,8 @@ public class Move implements Command{
         if(id == 0)
         {
             int[] toHold = {frame.getp1().getSumRolled(), frame.getp1().getCurrentX(), frame.getp1().getCurrentY(), frame.getp1().getRolled()};
-            //int temp = frame.getp1().getSumRolled();
-            //System.out.println("rolled before moving " + temp);
+            int temp = frame.getp1().getSumRolled();
+            System.out.println("last - rolled before moving " + temp);
             worker.setState(toHold);
             saver.addMemento(worker.save());
             count++;

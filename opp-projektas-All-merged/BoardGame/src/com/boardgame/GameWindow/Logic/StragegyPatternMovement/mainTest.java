@@ -16,7 +16,7 @@ public class mainTest {
         System.out.println("3 + RedPlane= " + context.executeStrategy(3));
   
         context = new newMovement(new RedTankOperation());		
-        System.out.println("3 + RedTank = " + context.executeStrategy(6));
+        System.out.println("6 + RedTank = " + context.executeStrategy(6));
 
         context = new newMovement(new RedCarOperation());		
         System.out.println("3 + RedCar= " + context.executeStrategy(3));

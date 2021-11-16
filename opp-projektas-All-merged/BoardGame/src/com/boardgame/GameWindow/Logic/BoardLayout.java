@@ -56,7 +56,7 @@ public class BoardLayout {
                         }
 
                     }
-                    else if (ii == 12 && jj == 12)
+                    else if (ii == 10 && jj == 10)
                     {
                         if(choice == 1){
                             Car red = (Car)vehciles.getFactory("Car").create("RedCar");
@@ -69,7 +69,7 @@ public class BoardLayout {
                         }
 
                     }
-                    else if (ii == 8 && jj == 8)
+                    else if (ii == 1 && jj == 1)
                     {
                         if(choice == 1){
                             Plane red = (Plane)vehciles.getFactory("Plane").create("RedPlane");
@@ -132,11 +132,11 @@ public class BoardLayout {
                 if(ii == 5 && jj == 5){
                     square = new Square(ii,jj,b,true);
                 }
-                else if (ii == 8 && jj == 8)
+                else if (ii == 1 && jj == 1)
                 {
                     square = new Square(ii,jj,b,true);
                 }
-                else if (ii == 12 && jj == 12)
+                else if (ii == 10 && jj == 10)
                 {
                     square = new Square(ii,jj,b,true);
                 }
@@ -154,117 +154,177 @@ public class BoardLayout {
     public void  initializeBoard (PlayerIcon player1, PlayerIcon player2, int player_ID)
     {
 
-        if(player_ID == 0)
-        {
-            if(player1.getEffectedByEvent())
-            {
-                player1.setEffectedTurns(player1.getEffectedTurns()-1);
-                if(player1.getEffectedTurns() == 0)
-                {
+
+        if(player_ID == 0) {
+            if (player1.getEffectedByEvent()) {
+                player1.setEffectedTurns(player1.getEffectedTurns() - 1);
+                if (player1.getEffectedTurns() == 0) {
 
                     player1.setEffectedByEvent(false);
                     player1.setEventName("");
                 }
             }
-            player1.sumRolled(player1.getRolled());
-            Square newSquare = path.getSquare(player1.getSumRolled());
-            player1.setX(newSquare.returnX());
-            player1.setY(newSquare.returnY());
-            if(newSquare.getEvent()){
-                System.out.println(newSquare.getEventName());
-                EventHandler handle = new EventHandler(player1, newSquare.getEventName());
-                player1 = handle.HandleEvent(path);
+            //---------------------------------------------------------------------------------------------------
+            int score = player1.getSumRolled() + player1.getRolled();
+            System.out.println("P1 score " + score);
 
+            if (score >= 30) {
+                System.out.println("Player 1 wins");
+                player1.setX(15);
+                player1.setY(15);
+                for (Iterator iter = boardIterator.getIterator(); iter.hasNext(); ) {
+
+                    Square square = (Square) iter.next();
+
+                    if (square.returnX() == player1.getCurrentX() && square.returnY() == player1.getCurrentY()) {
+                        player1.Icon(player1.getCurrentX(), player1.getCurrentY(), player2.getCurrentX(), player2.getCurrentY());
+                        square.updateButton(player1.getIcon());
+                        Board.add(square.returnButton());
+
+                    } else if (square.returnX() == player2.getCurrentX() && square.returnY() == player2.getCurrentY()) {
+                        player2.Icon(player1.getCurrentX(), player1.getCurrentY(), player2.getCurrentX(), player2.getCurrentY());
+                        square.updateButton(player2.getIcon());
+                        Board.add(square.returnButton());
+                    } else if (square.getEvent()) {
+                        Board.add(square.returnButton());
+                    } else {
+                        ImageIcon icon = new ImageIcon(
+                                new BufferedImage(50, 50, BufferedImage.TYPE_INT_ARGB));
+                        square.updateButton(icon);
+                        Board.add(square.returnButton());
+                    }
+
+
+                }
+                return ;
             }
-            System.out.println(player1.getEffectedTurns());
+            //---------------------------------------------------------------------------------------------------
+            else {
+                player1.sumRolled(player1.getRolled());
+                Square newSquare = path.getSquare(player1.getSumRolled());
+                player1.setX(newSquare.returnX());
 
-            for(Iterator iter = boardIterator.getIterator(); iter.hasNext();){
 
-                Square square = (Square)iter.next();
-
-                if(square.returnX() == player1.getCurrentX() && square.returnY() == player1.getCurrentY())
-                {
-                    player1.Icon(player1.getCurrentX(),player1.getCurrentY(),player2.getCurrentX(),player2.getCurrentY());
-                    square.updateButton(player1.getIcon());
-                    Board.add(square.returnButton());
+                player1.setY(newSquare.returnY());
+                if (newSquare.getEvent()) {
+                    System.out.println(newSquare.getEventName());
+                    EventHandler handle = new EventHandler(player1, newSquare.getEventName());
+                    player1 = handle.HandleEvent(path);
 
                 }
-                else if(square.returnX() == player2.getCurrentX() && square.returnY() == player2.getCurrentY())
-                {
-                    player2.Icon(player1.getCurrentX(),player1.getCurrentY(),player2.getCurrentX(),player2.getCurrentY());
-                    square.updateButton(player2.getIcon());
-                    Board.add(square.returnButton());
-                }
-                else if (square.getEvent())
-                {
-                    Board.add(square.returnButton());
-                }
-                else
-                {
-                    ImageIcon icon = new ImageIcon(
-                            new BufferedImage(50, 50, BufferedImage.TYPE_INT_ARGB));
-                    square.updateButton(icon);
-                    Board.add(square.returnButton());
-                }
+                System.out.println(player1.getEffectedTurns());
+
+                for (Iterator iter = boardIterator.getIterator(); iter.hasNext(); ) {
+
+                    Square square = (Square) iter.next();
+
+                    if (square.returnX() == player1.getCurrentX() && square.returnY() == player1.getCurrentY()) {
+                        player1.Icon(player1.getCurrentX(), player1.getCurrentY(), player2.getCurrentX(), player2.getCurrentY());
+                        square.updateButton(player1.getIcon());
+                        Board.add(square.returnButton());
+
+                    } else if (square.returnX() == player2.getCurrentX() && square.returnY() == player2.getCurrentY()) {
+                        player2.Icon(player1.getCurrentX(), player1.getCurrentY(), player2.getCurrentX(), player2.getCurrentY());
+                        square.updateButton(player2.getIcon());
+                        Board.add(square.returnButton());
+                    } else if (square.getEvent()) {
+                        Board.add(square.returnButton());
+                    } else {
+                        ImageIcon icon = new ImageIcon(
+                                new BufferedImage(50, 50, BufferedImage.TYPE_INT_ARGB));
+                        square.updateButton(icon);
+                        Board.add(square.returnButton());
+                    }
 
 
+                }
             }
-        }
-        else
-        {
-            if(player2.getEffectedByEvent())
-            {
-                player2.setEffectedTurns(player2.getEffectedTurns()-1);
-                if(player2.getEffectedTurns() == 0)
-                {
+            }
+        else {
+            if (player2.getEffectedByEvent()) {
+                player2.setEffectedTurns(player2.getEffectedTurns() - 1);
+                if (player2.getEffectedTurns() == 0) {
                     player2.setEffectedByEvent(false);
                     player2.setEventName("");
                 }
             }
+            //---------------------------------------------------------------------------------------------------
+            int score = player2.getSumRolled() + player2.getRolled();
+            System.out.println("P2 score " + score);
 
-            player2.sumRolled(player2.getRolled());
-            Square newSquare = path.getSquare(player2.getSumRolled());
-            player2.setX(newSquare.returnX());
-            player2.setY(newSquare.returnY());
-            if(newSquare.getEvent()){
-                System.out.println(newSquare.getEventName());
-                EventHandler handle = new EventHandler(player2, newSquare.getEventName());
-                player2 = handle.HandleEvent(path);
+            if (score >= 30) {
 
+                System.out.println("Player 2 wins");
+                player2.setX(15);
+                player2.setY(15);
+
+                for (Iterator iter = boardIterator.getIterator(); iter.hasNext(); ) {
+
+                    Square square = (Square) iter.next();
+
+
+                    if (square.returnX() == player1.getCurrentX() && square.returnY() == player1.getCurrentY()) {
+                        player1.Icon(player1.getCurrentX(), player1.getCurrentY(), player2.getCurrentX(), player2.getCurrentY());
+                        square.updateButton(player1.getIcon());
+                        Board.add(square.returnButton());
+                    } else if (square.returnX() == player2.getCurrentX() && square.returnY() == player2.getCurrentY()) {
+                        player2.Icon(player1.getCurrentX(), player1.getCurrentY(), player2.getCurrentX(), player2.getCurrentY());
+                        square.updateButton(player2.getIcon());
+                        Board.add(square.returnButton());
+                    } else if (square.getEvent()) {
+                        Board.add(square.returnButton());
+                    } else {
+                        ImageIcon icon = new ImageIcon(
+                                new BufferedImage(50, 50, BufferedImage.TYPE_INT_ARGB));
+                        square.updateButton(icon);
+                        Board.add(square.returnButton());
+                    }
+
+                }
+                return ;
             }
-            System.out.println(player2.getEffectedTurns());
+            //---------------------------------------------------------------------------------------------------
+            else {
+                player2.sumRolled(player2.getRolled());
+                Square newSquare = path.getSquare(player2.getSumRolled());
+                System.out.println("whwat is this" + newSquare.returnX());
+                player2.setX(newSquare.returnX());
+                player2.setY(newSquare.returnY());
 
+                if (newSquare.getEvent()) {
+                    System.out.println(newSquare.getEventName());
+                    EventHandler handle = new EventHandler(player2, newSquare.getEventName());
+                    player2 = handle.HandleEvent(path);
 
-            for(Iterator iter = boardIterator.getIterator(); iter.hasNext();){
-
-                Square square = (Square)iter.next();
-
-
-                if(square.returnX() == player1.getCurrentX() && square.returnY() == player1.getCurrentY())
-                {
-                    player1.Icon(player1.getCurrentX(),player1.getCurrentY(),player2.getCurrentX(),player2.getCurrentY());
-                    square.updateButton(player1.getIcon());
-                    Board.add(square.returnButton());
                 }
-                else if(square.returnX() == player2.getCurrentX() && square.returnY() == player2.getCurrentY())
-                {
-                    player2.Icon(player1.getCurrentX(),player1.getCurrentY(),player2.getCurrentX(),player2.getCurrentY());
-                    square.updateButton(player2.getIcon());
-                    Board.add(square.returnButton());
-                }
-                else if (square.getEvent())
-                {
-                    Board.add(square.returnButton());
-                }
-                else
-                {
-                    ImageIcon icon = new ImageIcon(
-                            new BufferedImage(50, 50, BufferedImage.TYPE_INT_ARGB));
-                    square.updateButton(icon);
-                    Board.add(square.returnButton());
-                }
+                System.out.println(player2.getEffectedTurns());
 
+
+                for (Iterator iter = boardIterator.getIterator(); iter.hasNext(); ) {
+
+                    Square square = (Square) iter.next();
+
+
+                    if (square.returnX() == player1.getCurrentX() && square.returnY() == player1.getCurrentY()) {
+                        player1.Icon(player1.getCurrentX(), player1.getCurrentY(), player2.getCurrentX(), player2.getCurrentY());
+                        square.updateButton(player1.getIcon());
+                        Board.add(square.returnButton());
+                    } else if (square.returnX() == player2.getCurrentX() && square.returnY() == player2.getCurrentY()) {
+                        player2.Icon(player1.getCurrentX(), player1.getCurrentY(), player2.getCurrentX(), player2.getCurrentY());
+                        square.updateButton(player2.getIcon());
+                        Board.add(square.returnButton());
+                    } else if (square.getEvent()) {
+                        Board.add(square.returnButton());
+                    } else {
+                        ImageIcon icon = new ImageIcon(
+                                new BufferedImage(50, 50, BufferedImage.TYPE_INT_ARGB));
+                        square.updateButton(icon);
+                        Board.add(square.returnButton());
+                    }
+
+                }
             }
         }
+
     }
 }
