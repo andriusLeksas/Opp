@@ -11,7 +11,10 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.Scanner;
 
+import com.boardgame.GameWindow.Logic.AdapterPattern.Adapter;
+import com.boardgame.GameWindow.Logic.AdapterPattern.Target;
 import com.boardgame.GameWindow.Logic.BoardLayout;
 import com.boardgame.GameWindow.Logic.PlayerIcon;
 import com.boardgame.GameWindow.Logic.Square;
@@ -51,10 +54,15 @@ public class Client extends JPanel{
 		public void InitSocket(String server, int port, GameAccess access) throws IOException {
 			socket = new Socket(server, port);
 			outputStream = socket.getOutputStream();
-			
 			JFrame game = new JFrame();
 			GameFrame cb = new GameFrame(access);
 			JPanel frame = new ChatFrame(access);
+
+			Scanner input = new Scanner(System.in);  // Create a Scanner object
+			Target target = new Adapter();
+			System.out.println("Input your username, if you leave it empty it will be generated");
+			String i = input.nextLine();
+			String username = target.RequestUsername(i);
 
 			Thread receivingThread = new Thread() {
 				//@Override
@@ -68,7 +76,7 @@ public class Client extends JPanel{
 							cb.createPlayer(ID);
 							game.add(cb.getGui());
 							game.add(frame, BorderLayout.EAST);
-							game.setTitle("StrategyBoardGame: Player " +  ID);
+							game.setTitle("StrategyBoardGame: Player " +  ID + " " + target.RequestUsername(username));
 							game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 							game.setLocationByPlatform(true);
 							game.pack();
