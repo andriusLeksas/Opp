@@ -118,11 +118,13 @@ public class Client extends JPanel{
         private JTextField inputTextField;
         private JButton sendButton;
 		private GameAccess chatAccess;
+
 		private InterpreterContext ic = new InterpreterContext();
 
         public ChatFrame(GameAccess chatAccess) {
             this.chatAccess = chatAccess;
             chatAccess.attach(this);
+
             buildGUI();
         }
 
@@ -146,6 +148,7 @@ public class Client extends JPanel{
                     String str = inputTextField.getText();
 					if (str != null && str.trim().length() > 0)
 					{
+
 						makeChatExp message = new makeChatExp(str, chatAccess.playerID);
 						//System.out.println("interpreter message done");
 						String send = message.write(ic);
@@ -175,8 +178,7 @@ public class Client extends JPanel{
 						//Rolled = (char)(Math.random()*(7-1+1)+1);
 						char ID = finalArg.toString().charAt(3);
 
-						textArea.append("Player" + ID + " rolled " + Rolled + "!");
-						textArea.append("Player" + ID + " score " + Score + "!");
+						textArea.append("Player " + ID + " rolled " + Rolled + "!");
                     	textArea.append("\n");
 					}
 					else if(check != '$')
