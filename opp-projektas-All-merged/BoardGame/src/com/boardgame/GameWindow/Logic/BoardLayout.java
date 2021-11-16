@@ -249,11 +249,9 @@ public class BoardLayout {
                         square.updateButton(icon);
                         Board.add(square.returnButton());
                     }
-
-
                 }
             }
-            }
+        }
         else {
             if (player2.getEffectedByEvent()) {
                 player2.setEffectedTurns(player2.getEffectedTurns() - 1);

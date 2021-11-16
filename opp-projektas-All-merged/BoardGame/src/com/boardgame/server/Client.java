@@ -249,16 +249,7 @@ public class Client extends JPanel{
 	//--- Create the dice
 	_left = new Die();
 	DicePanel dice = new DicePanel();
- 
-	//--- Create the button to roll the dice
-	//JButton rollButton = new JButton("Roll");
-	//rollButton.setFont(new Font("Sansserif", Font.PLAIN, 12));
-	//rollButton.addActionListener(this);
-	//undoButton.setFont(new Font("Sansserif", Font.PLAIN, 20));
-	//undoButton.addActionListener(this);
-	//endButton.setFont(new Font("Sansserif", Font.PLAIN, 20));
-	//endButton.addActionListener(this);
-//	System.out.println(_left.getValue());
+
 	//--- Create panel for two dice
 	JPanel dicePanel = new JPanel();
 	dicePanel.setLayout(new GridLayout(1, 2, 4, 0));
@@ -267,24 +258,22 @@ public class Client extends JPanel{
 	
 	dice.setLayout(new BorderLayout());
 	dice.setSize( 300, 300 );
-	//dice.add(rollButton, BorderLayout.NORTH);
-	//dice.add(undoButton, BorderLayout.CENTER);
-	//dice.add(endButton, BorderLayout.EAST);
+
 	roll = new ProxyButton("Roll", dice);
-
-
 	undo = new ProxyButton("Undo", dice);
 	end = new ProxyButton("End", dice);
+
 	roll.addToGame(this);
-	//roll 1 dice
 	undo.addToGame(this);
 	end.addToGame(this);
+
 	dice.add(dicePanel , BorderLayout.SOUTH);
+
 	roll.on();
 	undo.off();
 	end.off();
-	
-	
+
+
 	this.setLayout(new BorderLayout());
 	this.setBorder(new EmptyBorder(10, 10, 10, 10));
 	JToolBar tools = new JToolBar();

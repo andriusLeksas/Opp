@@ -294,7 +294,7 @@ public class PlayerIcon implements FasadeForPlayer {
         MovementEventFactory factory = new MovementEventFactory();
         if(eventName.endsWith("Tank")){
             Tank tank = (Tank)tanks.getFactory("Tank").create(eventName);
-            setIcon(tank.getTank());
+            setIcon(tank.getTankPlayer(ID));
             setEffectedByEvent(true);
             setEffectedTurns(2);
             setEventName(eventName);
@@ -302,7 +302,7 @@ public class PlayerIcon implements FasadeForPlayer {
         }
         else if(eventName.endsWith("Plane")){
             Plane plane = (Plane)tanks.getFactory("Plane").create(eventName);
-            setIcon(plane.getPlane());
+            setIcon(plane.getPlanePlayer(ID));
             setEffectedByEvent(true);
             setEffectedTurns(2);
             setEventName(eventName);
@@ -310,7 +310,7 @@ public class PlayerIcon implements FasadeForPlayer {
         }
         else if(eventName.endsWith("Car")){
             Car car = (Car)tanks.getFactory("Car").create(eventName);
-            setIcon(car.getCar());
+            setIcon(car.getCarPlayer(ID));
             setEffectedByEvent(true);
             setEffectedTurns(2);
             setEventName(eventName);
