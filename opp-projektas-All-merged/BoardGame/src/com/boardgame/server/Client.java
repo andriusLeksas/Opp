@@ -339,33 +339,30 @@ public class Client extends JPanel{
 	}
 
 	public void move(){
-		if(player_ID == 0)
-			{
-				Board.repaint();
-				_left.roll();
-				P1Rolled += _left.getValue();
-				P1Rolled += _left.getValue();
+		if(player_ID == 0) {
+			Board.repaint();
+			_left.roll();
+			P1Rolled += _left.getValue();
+			P1Rolled += _left.getValue();
 
-				//chatAccess.send("@" + String.valueOf(_left.getValue()) + " " + String.valueOf(player_ID));
-				update("@" + String.valueOf(_left.getValue()) + " " + String.valueOf(player_ID));
-				roll.off();
-				//rollButton.setText("End turn on undo");
-				//chatAccess.send("$" + player_ID);
-				undo.on();
-				end.on();
-			}
-			else
-			{
-				Board.repaint();
-				_left.roll();
-				P2Rolled += _left.getValue();
-				//chatAccess.send("@" + String.valueOf(_left.getValue()) + " " + String.valueOf(player_ID));
-				update("@" + String.valueOf(_left.getValue()) + " " + String.valueOf(player_ID));
-				roll.off();				
-				//chatAccess.send("$" + player_ID);
-				undo.on();
-				end.on();
-			}
+			//chatAccess.send("@" + String.valueOf(_left.getValue()) + " " + String.valueOf(player_ID));
+			update("@" + String.valueOf(_left.getValue()) + " " + String.valueOf(player_ID));
+			roll.off();
+			//rollButton.setText("End turn on undo");
+			//chatAccess.send("$" + player_ID);
+			undo.on();
+			end.on();
+		}else {
+			Board.repaint();
+			_left.roll();
+			P2Rolled += _left.getValue();
+			//chatAccess.send("@" + String.valueOf(_left.getValue()) + " " + String.valueOf(player_ID));
+			update("@" + String.valueOf(_left.getValue()) + " " + String.valueOf(player_ID));
+			roll.off();
+			//chatAccess.send("$" + player_ID);
+			undo.on();
+			end.on();
+		}
 	}
 
 	public void undo(int[] player, int id){

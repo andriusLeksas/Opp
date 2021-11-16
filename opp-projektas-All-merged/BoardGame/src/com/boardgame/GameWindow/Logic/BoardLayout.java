@@ -174,6 +174,8 @@ public class BoardLayout {
                 System.out.println("Player 1 wins");
                 player1.setX(15);
                 player1.setY(15);
+
+
                 for (Iterator iter = boardIterator.getIterator(); iter.hasNext(); ) {
 
                     Square square = (Square) iter.next();
@@ -196,8 +198,8 @@ public class BoardLayout {
                         Board.add(square.returnButton());
                     }
 
-
                 }
+                JOptionPane.showMessageDialog(null, "Player 1 wins!", "Winner winner chicken dinner", JOptionPane.PLAIN_MESSAGE);
                 return ;
             }
             //---------------------------------------------------------------------------------------------------
@@ -283,6 +285,7 @@ public class BoardLayout {
                     }
 
                 }
+                JOptionPane.showMessageDialog(null, "Player 2 wins!", "Winner winner chicken dinner", JOptionPane.PLAIN_MESSAGE);
                 return ;
             }
             //---------------------------------------------------------------------------------------------------
