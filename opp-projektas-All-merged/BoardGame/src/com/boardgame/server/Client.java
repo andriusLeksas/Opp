@@ -207,16 +207,6 @@ public class Client extends JPanel{
 	private Buttons undo;
 	private Buttons end;
 
-	private Buttons roll1;
-	private Buttons roll2;
-	private Buttons roll3;
-	private Buttons roll4;
-	private Buttons roll5;
-	private Buttons roll6;
-
-
-
-
 	private StepsCounter counter = new StepsCounter(30);
 	private JButton stepsLeft = new JButton("30");
 	private final int maxSteps = 30;
@@ -275,7 +265,6 @@ public class Client extends JPanel{
 	roll = new ProxyButton("Roll", dice);
 
 
-	roll2 = new ProxyButton("Roll", dice);
 	undo = new ProxyButton("Undo", dice);
 	end = new ProxyButton("End", dice);
 	roll.addToGame(this);
@@ -285,7 +274,7 @@ public class Client extends JPanel{
 	dice.add(dicePanel , BorderLayout.SOUTH);
 	roll.on();
 	undo.off();
-	end.on();
+	end.off();
 	
 	
 	this.setLayout(new BorderLayout());
@@ -352,7 +341,6 @@ public class Client extends JPanel{
 	public void move(){
 		if(player_ID == 0)
 			{
-
 				Board.repaint();
 				_left.roll();
 				P1Rolled += _left.getValue();
@@ -364,6 +352,7 @@ public class Client extends JPanel{
 				//rollButton.setText("End turn on undo");
 				//chatAccess.send("$" + player_ID);
 				undo.on();
+				end.on();
 			}
 			else
 			{
@@ -375,6 +364,7 @@ public class Client extends JPanel{
 				roll.off();				
 				//chatAccess.send("$" + player_ID);
 				undo.on();
+				end.on();
 			}
 	}
 
@@ -392,6 +382,7 @@ public class Client extends JPanel{
 			boardLayout.initializeBoard(player1, player2, 0);
 			roll.on();
 			undo.off();
+			end.off();
 		}
 		else{
 			this.player2.setSumRolled(player[0]);
@@ -401,6 +392,7 @@ public class Client extends JPanel{
 			boardLayout.initializeBoard(player1, player2, 1);
 			roll.on();
 			undo.off();
+			end.off();
 		}
 
 	}
@@ -457,7 +449,8 @@ public class Client extends JPanel{
 				}
 				else if(check == '$') {
 					roll.on();
-					end.on();
+					end.off();
+					undo.off();
 				}
 
 			}

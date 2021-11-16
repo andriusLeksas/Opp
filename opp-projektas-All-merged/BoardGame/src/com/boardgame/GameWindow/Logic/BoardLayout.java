@@ -11,6 +11,8 @@ import com.boardgame.GameWindow.Logic.AbstractFactory.Plane;
 import com.boardgame.GameWindow.Logic.AbstractFactory.Tank;
 import com.boardgame.GameWindow.inProgress.IteratorPattern.BoardRepository;
 import com.boardgame.GameWindow.inProgress.IteratorPattern.Iterator;
+import com.boardgame.server.Buttons;
+import com.boardgame.server.Client;
 
 
 public class BoardLayout {
