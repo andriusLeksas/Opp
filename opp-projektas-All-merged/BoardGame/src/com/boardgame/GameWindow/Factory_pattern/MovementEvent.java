@@ -20,6 +20,7 @@ public abstract class MovementEvent {
     this.tiles = tilesnum;
     }
     public MovementEvent CreateTemplate(String type) {
+
         MovementEvent Event =null;
         if (type == "red") 
         {

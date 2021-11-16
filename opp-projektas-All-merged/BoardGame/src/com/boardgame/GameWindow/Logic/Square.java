@@ -4,8 +4,9 @@ import javax.swing.*;
 import javax.swing.ImageIcon;
 
 import com.boardgame.GameWindow.Factory_pattern.MovementEvent;
+import com.boardgame.GameWindow.Logic.Prototype.Prototype;
 
-public class Square {
+public class Square implements Prototype {
     
     private int X, Y;
     private JButton button;
@@ -77,6 +78,12 @@ public class Square {
     public boolean getEvent(){
 
         return hasevent;
+    }
+
+    @Override
+    public Prototype getClone() {
+
+        return new Square(X, Y, button,hasevent,movementEvent);
     }
 
 }

@@ -133,17 +133,21 @@ public class BoardLayout {
 
                 if(ii == 5 && jj == 5){
                     square = new Square(ii,jj,b,true);
+                    Square squareClone = (Square)square.getClone();
                 }
                 else if (ii == 1 && jj == 1)
                 {
                     square = new Square(ii,jj,b,true);
+                    Square squareClone2 = (Square)square.getClone();
                 }
                 else if (ii == 10 && jj == 10)
                 {
                     square = new Square(ii,jj,b,true);
+                    Square squareClone3 = (Square)square.getClone();
                 }
                 else {
                     square = new Square(ii,jj,b,false);
+                    Square squareClone4 = (Square)square.getClone();
                 }
                 // boardSquares[index++] = square;
                 boardIterator.addSquare(square);
