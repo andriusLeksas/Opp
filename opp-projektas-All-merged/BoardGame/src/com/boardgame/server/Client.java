@@ -16,6 +16,7 @@ import java.util.Scanner;
 import com.boardgame.GameWindow.Logic.AdapterPattern.Adapter;
 import com.boardgame.GameWindow.Logic.AdapterPattern.Target;
 import com.boardgame.GameWindow.Logic.BoardLayout;
+import com.boardgame.GameWindow.Logic.BridgePattern.*;
 import com.boardgame.GameWindow.Logic.PlayerIcon;
 import com.boardgame.GameWindow.Logic.Square;
 import com.boardgame.GameWindow.Logic.SingletonPattern.ErrorLogger;
@@ -50,6 +51,11 @@ public class Client extends JPanel{
 				o.update(asd);
 			}
 		}
+
+		AbstractBomb TntRemote = new RefinedBombTnt(new ConcreteDetonationRemote());
+		AbstractBomb TntStandart = new RefinedBombTnt(new ConcreteDetonationStandart());
+		AbstractBomb DynamiteRemote = new RefinedBombDynamite(new ConcreteDetonationRemote());
+		AbstractBomb DynamiteStandart = new RefinedBombDynamite(new ConcreteDetonationStandart());
 
 		public void InitSocket(String server, int port, GameAccess access) throws IOException {
 			socket = new Socket(server, port);
