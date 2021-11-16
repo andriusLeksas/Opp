@@ -4,6 +4,5 @@ import javax.swing.ImageIcon;
 
 public interface Tank {
     ImageIcon getTank();
-    ImageIcon getTankPlayer(int id);
     int getSpeed();
 }

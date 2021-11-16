@@ -4,6 +4,5 @@ import javax.swing.ImageIcon;
 
 public interface Car {
     ImageIcon getCar();
-    ImageIcon getCarPlayer(int id);
     int getSpeed();
 }
