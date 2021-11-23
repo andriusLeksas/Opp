@@ -2,7 +2,7 @@ package com.boardgame.GameWindow.Logic;
 
 import javax.swing.JButton;
 
-import com.boardgame.GameWindow.Factory_pattern.MovementEvent;
+import com.boardgame.GameWindow.inProgress.Template_pattern.MovementEvent;
 
 public class Path {
     

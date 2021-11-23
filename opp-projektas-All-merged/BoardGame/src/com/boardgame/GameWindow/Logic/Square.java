@@ -3,7 +3,7 @@ package com.boardgame.GameWindow.Logic;
 import javax.swing.*;
 import javax.swing.ImageIcon;
 
-import com.boardgame.GameWindow.Factory_pattern.MovementEvent;
+import com.boardgame.GameWindow.inProgress.Template_pattern.MovementEvent;
 import com.boardgame.GameWindow.Logic.Prototype.Prototype;
 
 public class Square implements Prototype {

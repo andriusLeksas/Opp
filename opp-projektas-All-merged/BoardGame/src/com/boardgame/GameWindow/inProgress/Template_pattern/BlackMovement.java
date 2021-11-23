@@ -1,4 +1,4 @@
-package com.boardgame.GameWindow.Factory_pattern;
+package com.boardgame.GameWindow.inProgress.Template_pattern;
 public class BlackMovement extends MovementEvent{
     public BlackMovement() {
         setName("black");

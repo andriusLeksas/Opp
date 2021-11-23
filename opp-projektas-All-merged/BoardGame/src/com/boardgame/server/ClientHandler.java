@@ -3,8 +3,8 @@ package com.boardgame.server;
 import java.io.*;
 import java.net.*;
 
-import com.boardgame.GameWindow.inProgress.Mediator.ChatRoom;
-import com.boardgame.GameWindow.inProgress.Mediator.User;
+import com.boardgame.server.inProgress.Mediator.ChatRoom;
+import com.boardgame.server.inProgress.Mediator.User;
 import com.boardgame.server.inProgress.InterpreterContext;
 
 

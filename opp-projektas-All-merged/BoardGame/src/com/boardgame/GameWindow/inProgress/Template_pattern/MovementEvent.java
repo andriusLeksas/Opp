@@ -1,8 +1,4 @@
-package com.boardgame.GameWindow.Factory_pattern;
-
-import com.boardgame.GameWindow.Logic.Path;
-import com.boardgame.GameWindow.Logic.PlayerIcon;
-import com.boardgame.GameWindow.Logic.Square;
+package com.boardgame.GameWindow.inProgress.Template_pattern;
 
 public abstract class MovementEvent {
 	

@@ -1,7 +1,7 @@
 package com.boardgame.GameWindow.inProgress.ChainOfResponsibility;
 
-import com.boardgame.GameWindow.Factory_pattern.MovementEvent;
-import com.boardgame.GameWindow.Factory_pattern.MovementEventFactory;
+import com.boardgame.GameWindow.inProgress.Template_pattern.MovementEvent;
+import com.boardgame.GameWindow.inProgress.Template_pattern.MovementEventFactory;
 
 public class FactoryCreator extends AbstractCreator{
 

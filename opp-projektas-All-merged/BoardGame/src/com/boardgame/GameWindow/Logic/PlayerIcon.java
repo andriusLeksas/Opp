@@ -2,8 +2,8 @@ package com.boardgame.GameWindow.Logic;
 
 import javax.swing.ImageIcon;
 
-import com.boardgame.GameWindow.Factory_pattern.MovementEvent;
-import com.boardgame.GameWindow.Factory_pattern.MovementEventFactory;
+import com.boardgame.GameWindow.inProgress.Template_pattern.MovementEvent;
+import com.boardgame.GameWindow.inProgress.Template_pattern.MovementEventFactory;
 import com.boardgame.GameWindow.Logic.AbstractFactory.Car;
 import com.boardgame.GameWindow.Logic.AbstractFactory.FactoryProvider;
 import com.boardgame.GameWindow.Logic.AbstractFactory.Plane;
