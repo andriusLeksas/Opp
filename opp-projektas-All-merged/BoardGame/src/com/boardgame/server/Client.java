@@ -23,8 +23,11 @@ import com.boardgame.GameWindow.Logic.SingletonPattern.ErrorLogger;
 import com.boardgame.GameWindow.inProgress.StatePattern.StepsCounter;
 import com.boardgame.GameWindow.utils.DicePanel;
 import com.boardgame.GameWindow.utils.Die;
-import com.boardgame.server.inProgress.InterpreterContext;
-import com.boardgame.server.inProgress.ProxyButton;
+import com.boardgame.server.inProgress.Interpretator.InterpreterContext;
+import com.boardgame.server.inProgress.Interpretator.makeChatExp;
+import com.boardgame.server.inProgress.Interpretator.makeCommandExp;
+import com.boardgame.server.inProgress.Proxy.Buttons;
+import com.boardgame.server.inProgress.Proxy.ProxyButton;
 
 
 public class Client extends JPanel{
@@ -260,8 +263,9 @@ public class Client extends JPanel{
 	JPanel dicePanel = new JPanel();
 	dicePanel.setLayout(new GridLayout(1, 2, 4, 0));
 	dicePanel.add(_left);
-	//--- Add components to content pane
-	
+	//--- Add components to content panel
+
+
 	dice.setLayout(new BorderLayout());
 	dice.setSize( 300, 300 );
 
@@ -279,7 +283,6 @@ public class Client extends JPanel{
 	undo.off();
 	end.off();
 
-
 	this.setLayout(new BorderLayout());
 	this.setBorder(new EmptyBorder(10, 10, 10, 10));
 	JToolBar tools = new JToolBar();
@@ -290,6 +293,7 @@ public class Client extends JPanel{
 	top.add(new JPanel());
 	top.add(new JPanel());
 	top.add(new JPanel());
+
 	this.add(top, BorderLayout.PAGE_START);
 	Board = new JPanel(new GridLayout(Dimensions, Dimensions));
 	Board.setBorder(new LineBorder(Color.BLACK));

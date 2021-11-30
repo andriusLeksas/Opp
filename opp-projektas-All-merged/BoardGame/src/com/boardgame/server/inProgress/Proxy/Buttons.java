@@ -1,4 +1,4 @@
-package com.boardgame.server;
+package com.boardgame.server.inProgress.Proxy;
 import javax.swing.JButton;
 
 import com.boardgame.server.Client.GameFrame;

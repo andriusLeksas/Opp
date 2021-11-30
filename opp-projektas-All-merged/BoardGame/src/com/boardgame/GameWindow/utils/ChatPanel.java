@@ -30,6 +30,7 @@ public class ChatPanel extends JPanel {
         public JButton     sendMessage;
         public JTextField  messageBox;
         public JTextArea   chatBox;
+
     public JPanel display() {
 
         this.setLayout(new BorderLayout());
@@ -81,8 +82,7 @@ public class ChatPanel extends JPanel {
 
     class sendMessageButtonListener implements ActionListener {
         public void actionPerformed(ActionEvent event) {
-        	
-        	
+
         	
             if (messageBox.getText().length() < 1) {
                 // do nothing 

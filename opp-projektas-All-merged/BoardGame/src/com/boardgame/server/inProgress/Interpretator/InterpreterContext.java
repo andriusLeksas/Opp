@@ -1,4 +1,4 @@
-package com.boardgame.server.inProgress;
+package com.boardgame.server.inProgress.Interpretator;
 
 import javax.lang.model.util.ElementScanner6;
 

@@ -1,6 +1,4 @@
-package com.boardgame.server.inProgress;
-
-import com.boardgame.server.inProgress.InterpreterContext;
+package com.boardgame.server.inProgress.Interpretator;
 
 public interface Expression {
     public String write(InterpreterContext context);

@@ -15,6 +15,8 @@ private Die _left; // component for one die
 private int Rolled;
 private JButton rollButton = new JButton("Roll");
 private JButton undoButton = new JButton("Roll");
+
+
 TextField textField = new TextField();
 //end instance variables
 //====================================================== constructor
