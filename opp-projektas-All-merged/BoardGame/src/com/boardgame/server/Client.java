@@ -20,14 +20,14 @@ import com.boardgame.GameWindow.Logic.BridgePattern.*;
 import com.boardgame.GameWindow.Logic.PlayerIcon;
 import com.boardgame.GameWindow.Logic.Square;
 import com.boardgame.GameWindow.Logic.SingletonPattern.ErrorLogger;
-import com.boardgame.GameWindow.inProgress.StatePattern.StepsCounter;
+import com.boardgame.GameWindow.Lab2.StatePattern.StepsCounter;
 import com.boardgame.GameWindow.utils.DicePanel;
 import com.boardgame.GameWindow.utils.Die;
-import com.boardgame.server.inProgress.Interpretator.InterpreterContext;
-import com.boardgame.server.inProgress.Interpretator.makeChatExp;
-import com.boardgame.server.inProgress.Interpretator.makeCommandExp;
-import com.boardgame.server.inProgress.Proxy.Buttons;
-import com.boardgame.server.inProgress.Proxy.ProxyButton;
+import com.boardgame.server.Lab2.Interpretator.InterpreterContext;
+import com.boardgame.server.Lab2.Interpretator.makeChatExp;
+import com.boardgame.server.Lab2.Interpretator.makeCommandExp;
+import com.boardgame.server.Lab2.Proxy.Buttons;
+import com.boardgame.server.Lab2.Proxy.ProxyButton;
 
 
 public class Client extends JPanel{

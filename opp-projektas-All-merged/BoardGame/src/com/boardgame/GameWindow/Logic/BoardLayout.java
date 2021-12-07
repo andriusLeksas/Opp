@@ -12,8 +12,8 @@ import com.boardgame.GameWindow.Logic.AbstractFactory.Car;
 import com.boardgame.GameWindow.Logic.AbstractFactory.FactoryProvider;
 import com.boardgame.GameWindow.Logic.AbstractFactory.Plane;
 import com.boardgame.GameWindow.Logic.AbstractFactory.Tank;
-import com.boardgame.server.inProgress.IteratorPattern.BoardRepository;
-import com.boardgame.server.inProgress.IteratorPattern.Iterator;
+import com.boardgame.server.Lab2.IteratorPattern.BoardRepository;
+import com.boardgame.server.Lab2.IteratorPattern.Iterator;
 
 
 public class BoardLayout {

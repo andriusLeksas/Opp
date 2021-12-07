@@ -1,8 +1,8 @@
 package com.boardgame.server;
 
 import com.boardgame.server.Client.GameFrame;
-import com.boardgame.server.inProgress.CareTaker;
-import com.boardgame.server.inProgress.Originator;
+import com.boardgame.server.Lab2.Memento.CareTaker;
+import com.boardgame.server.Lab2.Memento.Originator;
 
 public class Move implements Command{
 

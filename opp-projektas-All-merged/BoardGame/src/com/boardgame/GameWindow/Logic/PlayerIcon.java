@@ -2,8 +2,8 @@ package com.boardgame.GameWindow.Logic;
 
 import javax.swing.ImageIcon;
 
-import com.boardgame.GameWindow.inProgress.Template_pattern.MovementEvent;
-import com.boardgame.GameWindow.inProgress.Template_pattern.MovementEventFactory;
+import com.boardgame.GameWindow.Lab2.Template_pattern.MovementEvent;
+import com.boardgame.GameWindow.Lab2.Template_pattern.MovementEventFactory;
 import com.boardgame.GameWindow.Logic.AbstractFactory.Car;
 import com.boardgame.GameWindow.Logic.AbstractFactory.FactoryProvider;
 import com.boardgame.GameWindow.Logic.AbstractFactory.Plane;
@@ -15,8 +15,8 @@ import com.boardgame.GameWindow.Logic.DecoratorPattern.Playerlmpl;
 import com.boardgame.GameWindow.Logic.DecoratorPattern.ThreeStars;
 import com.boardgame.GameWindow.Logic.DecoratorPattern.TwoStars;
 import com.boardgame.GameWindow.Logic.StragegyPatternMovement.*;
-import com.boardgame.GameWindow.inProgress.flyWeightPattern.ImageFactory;
-import com.boardgame.GameWindow.inProgress.flyWeightPattern.drawImage;
+import com.boardgame.GameWindow.Lab2.flyWeightPattern.ImageFactory;
+import com.boardgame.GameWindow.Lab2.flyWeightPattern.drawImage;
 
 
 public class PlayerIcon implements FasadeForPlayer {

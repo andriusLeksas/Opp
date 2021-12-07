@@ -420,9 +420,9 @@ Caused by: org.xml.sax.SAXParseExceptionpublicId: file:/C:/Users/User/Documents/
 	... 15 more
 
 !ENTRY org.eclipse.jdt.launching 4 4 2020-11-15 12:17:00.740
-!MESSAGE [Working copy] MovementEventTest.java [in com.boardgame.GameWindow.inProgress.Template_pattern [in src [in BoardGame]]] does not exist
+!MESSAGE [Working copy] MovementEventTest.java [in com.boardgame.GameWindow.Lab2.Template_pattern [in src [in BoardGame]]] does not exist
 !STACK 1
-Java Model Exception: Java Model Status [[Working copy] MovementEventTest.java [in com.boardgame.GameWindow.inProgress.Template_pattern [in src [in BoardGame]]] does not exist]
+Java Model Exception: Java Model Status [[Working copy] MovementEventTest.java [in com.boardgame.GameWindow.Lab2.Template_pattern [in src [in BoardGame]]] does not exist]
 	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:573)
 	at org.eclipse.jdt.internal.core.Openable.getUnderlyingResource(Openable.java:360)
 	at org.eclipse.jdt.internal.core.CompilationUnit.getUnderlyingResource(CompilationUnit.java:979)
@@ -499,7 +499,7 @@ Java Model Exception: Java Model Status [[Working copy] MovementEventTest.java [
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 !SUBENTRY 1 org.eclipse.jdt.core 4 969 2020-11-15 12:17:00.741
-!MESSAGE [Working copy] MovementEventTest.java [in com.boardgame.GameWindow.inProgress.Template_pattern [in src [in BoardGame]]] does not exist
+!MESSAGE [Working copy] MovementEventTest.java [in com.boardgame.GameWindow.Lab2.Template_pattern [in src [in BoardGame]]] does not exist
 
 !ENTRY org.eclipse.core.jobs 2 2 2020-11-15 12:43:42.371
 !MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.eclemma.internal.core.launching.AgentServer

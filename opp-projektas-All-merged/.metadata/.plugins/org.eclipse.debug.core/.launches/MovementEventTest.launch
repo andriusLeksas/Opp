@@ -13,7 +13,7 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_SHOW_CODEDETAILS_IN_EXCEPTION_MESSAGES" value="true"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.boardgame.GameWindow.inProgress.Template_pattern.BlackMovementTest"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.boardgame.GameWindow.Lab2.Template_pattern.BlackMovementTest"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="BoardGame"/>
     <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-ea"/>
 </launchConfiguration>

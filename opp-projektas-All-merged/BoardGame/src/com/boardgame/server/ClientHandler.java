@@ -3,11 +3,11 @@ package com.boardgame.server;
 import java.io.*;
 import java.net.*;
 
-import com.boardgame.server.inProgress.Interpretator.makeChatExp;
-import com.boardgame.server.inProgress.Interpretator.makeCommandExp;
-import com.boardgame.server.inProgress.Mediator.ChatRoom;
-import com.boardgame.server.inProgress.Mediator.User;
-import com.boardgame.server.inProgress.Interpretator.InterpreterContext;
+import com.boardgame.server.Lab2.Interpretator.makeChatExp;
+import com.boardgame.server.Lab2.Interpretator.makeCommandExp;
+import com.boardgame.server.Lab2.Mediator.ChatRoom;
+import com.boardgame.server.Lab2.Mediator.User;
+import com.boardgame.server.Lab2.Interpretator.InterpreterContext;
 
 
 public class ClientHandler extends Thread{
