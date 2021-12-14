@@ -62,7 +62,7 @@ public class BoardLayout {
                         }
 
                     }
-                    else if (ii == 10 && jj == 10)
+                    else if (ii == 8 && jj == 8)
                     {
                         if(choice == 1){
                             Car red = (Car)vehciles.getFactory("Car").create("RedCar");
@@ -144,7 +144,7 @@ public class BoardLayout {
                     square = new Square(ii,jj,b,true);
                     Square squareClone2 = (Square)square.getClone();
                 }
-                else if (ii == 10 && jj == 10)
+                else if (ii == 8 && jj == 8)
                 {
                     square = new Square(ii,jj,b,true);
                     Square squareClone3 = (Square)square.getClone();
