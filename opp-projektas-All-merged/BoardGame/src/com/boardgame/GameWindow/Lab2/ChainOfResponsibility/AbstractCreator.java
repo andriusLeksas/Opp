@@ -11,5 +11,4 @@ public abstract class AbstractCreator {
     }
  
     abstract protected void CreateFactory(String message,String type);
-     
  }

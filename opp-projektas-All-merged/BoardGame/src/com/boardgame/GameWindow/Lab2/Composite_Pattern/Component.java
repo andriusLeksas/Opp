@@ -1,23 +1,30 @@
 package com.boardgame.GameWindow.Lab2.Composite_Pattern;
 
-import java.util.ArrayList;
-import java.util.List;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-public abstract class Component {
+public abstract class Component
+{
+    public abstract int GetX();
+    public abstract int GetY();
+    public abstract int GetWidth();
+    public abstract int GetHeight();
+    public abstract String GetColor();
 
-    protected List<Component> list = new ArrayList<>();
+    protected String  name;
+    public Component(String name)
+    {
+        this.name = name;
+    }
+    public abstract String Display(int depth);
 
-    public abstract float getScore();
-
-    public void add(Component g) {
-        list.add(g);
+    public void Add(Component component)
+    {
+        throw new NotImplementedException();
+    }
+    public void Remove(Component component)
+    {
+        throw new NotImplementedException();
     }
 
-    public void remove(Component g) {
-        list.remove(g);
-    }
-
-    public Component getChild(int i) {
-        return (Component) list.get(i);
-    }
 }
+

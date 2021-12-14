@@ -49,12 +49,10 @@ this.add(dicePanel , BorderLayout.CENTER);
 /////////////////////////////////// inner listener class RollListener
 /** Inner listener class for Roll button. */
 
-
 public void actionPerformed(ActionEvent e) {
     _left.roll();
     _left.getValue();
     
 }
-
 
 }
