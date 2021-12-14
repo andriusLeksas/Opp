@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.boardgame.GameWindow.Lab2.ChainOfResponsibility2.AbstractLogger;
-import com.boardgame.GameWindow.Lab2.ChainOfResponsibility2.ConsoleLogger;
+import com.boardgame.GameWindow.Lab2.ChainOfResponsibility2.InfoLogger;
 import com.boardgame.GameWindow.Lab2.ChainOfResponsibility2.ErrLogger;
 import com.boardgame.GameWindow.Lab2.ChainOfResponsibility2.DebugLogger;
 import com.boardgame.GameWindow.Logic.AdapterPattern.Adapter;
@@ -23,7 +23,6 @@ import com.boardgame.GameWindow.Logic.BoardLayout;
 import com.boardgame.GameWindow.Logic.BridgePattern.*;
 import com.boardgame.GameWindow.Logic.PlayerIcon;
 import com.boardgame.GameWindow.Logic.Square;
-import com.boardgame.GameWindow.Logic.SingletonPattern.ErrorLogger;
 import com.boardgame.GameWindow.Lab2.StatePattern.StepsCounter;
 import com.boardgame.GameWindow.Lab2.Visitor.DiceConcreteVisitor;
 import com.boardgame.GameWindow.Lab2.Visitor.DiceVisitor;
@@ -495,10 +494,10 @@ public class Client extends JPanel{
 
 		AbstractLogger errorLogger = new ErrLogger(AbstractLogger.ERROR);
 		AbstractLogger debugLogger = new DebugLogger(AbstractLogger.DEBUG);
-		AbstractLogger consoleLogger = new ConsoleLogger(AbstractLogger.INFO);
+		AbstractLogger infoLogger = new InfoLogger(AbstractLogger.INFO);
 
 		errorLogger.setNextLogger(debugLogger);
-		debugLogger.setNextLogger(consoleLogger);
+		debugLogger.setNextLogger(infoLogger);
 
 		return errorLogger;
 	}
