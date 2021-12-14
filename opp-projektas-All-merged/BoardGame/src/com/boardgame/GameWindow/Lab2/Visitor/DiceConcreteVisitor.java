@@ -1,8 +1,8 @@
 package com.boardgame.GameWindow.Lab2.Visitor;
 
-public class DiceInspection implements DiceInspector {
+public class DiceConcreteVisitor implements DiceVisitor {
     int rollMax;
-    public DiceInspection(int rollM){
+    public DiceConcreteVisitor(int rollM){
         rollMax = rollM;
     }
 

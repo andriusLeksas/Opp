@@ -8,7 +8,7 @@ public class Die extends JPanel implements DiceInterface {
     private int rollMax;
 
     @Override
-    public int accept(DiceInspector diceInspector) {
+    public int accept(DiceVisitor diceInspector) {
         return diceInspector.visit(this);
     }
 

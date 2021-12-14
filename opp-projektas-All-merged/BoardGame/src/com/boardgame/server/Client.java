@@ -21,8 +21,8 @@ import com.boardgame.GameWindow.Logic.PlayerIcon;
 import com.boardgame.GameWindow.Logic.Square;
 import com.boardgame.GameWindow.Logic.SingletonPattern.ErrorLogger;
 import com.boardgame.GameWindow.Lab2.StatePattern.StepsCounter;
-import com.boardgame.GameWindow.Lab2.Visitor.DiceInspection;
-import com.boardgame.GameWindow.Lab2.Visitor.DiceInspector;
+import com.boardgame.GameWindow.Lab2.Visitor.DiceConcreteVisitor;
+import com.boardgame.GameWindow.Lab2.Visitor.DiceVisitor;
 import com.boardgame.GameWindow.Lab2.Visitor.DicePanel;
 import com.boardgame.GameWindow.Lab2.Visitor.Die;
 import com.boardgame.server.Lab2.Interpretator.InterpreterContext;
@@ -260,7 +260,7 @@ public class Client extends JPanel{
 	Scanner input = new Scanner(System.in);
 	System.out.println("Select if you want to play with dice that has 6 or 9 values");
 	String diceInput = input.nextLine();
-	DiceInspector inspector = new DiceInspection(Integer.parseInt(diceInput));
+	DiceVisitor inspector = new DiceConcreteVisitor(Integer.parseInt(diceInput));
 	//--- Create the dice
 	_left = new Die(Integer.parseInt(diceInput));
 	DicePanel dice = new DicePanel();
