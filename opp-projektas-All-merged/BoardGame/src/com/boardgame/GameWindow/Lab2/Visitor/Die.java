@@ -1,11 +1,17 @@
-package com.boardgame.GameWindow.utils;
+package com.boardgame.GameWindow.Lab2.Visitor;
 
 import java.awt.*;
 import javax.swing.*;
 import java.util.Random;
 
-public class Die extends JPanel {
-    
+public class Die extends JPanel implements DiceInterface {
+    private int rollMax;
+
+    @Override
+    public int accept(DiceInspector diceInspector) {
+        return diceInspector.visit(this);
+    }
+
     /**
      *
      */
@@ -19,18 +25,27 @@ private static Random random = new Random(); // random generator
 //end class variables
 //====================================================== constructor
 /** Initialize to white background and 60x60 pixels. Initial roll.*/
-public Die() {
+public Die(int rollMax) {
+    this.rollMax = rollMax;
 setBackground(Color.white);
 //-- Preferred size is set, but layout may change it.
 setPreferredSize(new Dimension(60,60));
 roll(); // Set to random initial value
+}//end constructor
+
+public Die() {
+    setBackground(Color.white);
+//-- Preferred size is set, but layout may change it.
+    setPreferredSize(new Dimension(60,60));
+    roll(); // Set to random initial value
 }//end constructor
 //====================================================== method roll
 /** Produce random roll in range 1-6. Causes repaint().
 @return Result of roll (1-6).
 */
 public int roll() {
-int val = (int)(Math.random()*(6-1+1)+1); // Range 1-6         totalRolled = (int)(Math.random()*(7-1+1)+1);
+int val = (int)(Math.random()*(rollMax-1+1)+1); // Range 1-6         totalRolled = (int)(Math.random()*(7-1+1)+1);
+//int val = 9;
 setValue(val);
 return val;
 }//end roll
@@ -75,6 +90,8 @@ drawSpot(g, 3*w/4, 3*h/4);
 drawSpot(g, 3*w/4, h/4);
 drawSpot(g, w/4, 3*h/4);
 break;
+case 7: drawSpot(g, w/2, h/2);
+//fall thru next case
 case 6: drawSpot(g, w/4, h/4);
 drawSpot(g, 3*w/4, 3*h/4);
 drawSpot(g, 3*w/4, h/4);
@@ -82,6 +99,18 @@ drawSpot(g, w/4, 3*h/4);
 drawSpot(g, w/4, h/2);
 drawSpot(g, 3*w/4, h/2);
 break;
+case 9: drawSpot(g, w/2, h/4);
+//fall
+case 8: drawSpot(g, w/4, h/4);
+drawSpot(g, 3*w/4, 3*h/4);
+drawSpot(g, 3*w/4, h/4);
+drawSpot(g, w/4, 3*h/4);
+drawSpot(g, w/4, h/2);
+drawSpot(g, 3*w/4, h/2);
+drawSpot(g, w/2, h/2);
+drawSpot(g, w/2, 3*h/4);
+break;
+
 }
 }//end paintComponent
 /** Utility method used by paintComponent(). */

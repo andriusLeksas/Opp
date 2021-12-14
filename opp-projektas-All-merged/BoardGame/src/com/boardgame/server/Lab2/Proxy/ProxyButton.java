@@ -1,6 +1,6 @@
 package com.boardgame.server.Lab2.Proxy;
 
-import com.boardgame.GameWindow.utils.DicePanel;
+import com.boardgame.GameWindow.Lab2.Visitor.DicePanel;
 import com.boardgame.server.Client.GameFrame;
 
 import javax.swing.JButton;

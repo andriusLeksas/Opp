@@ -1,4 +1,4 @@
-package com.boardgame.GameWindow.utils;
+package com.boardgame.GameWindow.Lab2.Visitor;
 
 import java.awt.*;
 import java.awt.event.*;

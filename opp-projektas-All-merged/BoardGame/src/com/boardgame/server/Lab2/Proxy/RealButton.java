@@ -4,7 +4,7 @@ import java.awt.BorderLayout;
 
 import javax.swing.JButton;
 
-import com.boardgame.GameWindow.utils.DicePanel;
+import com.boardgame.GameWindow.Lab2.Visitor.DicePanel;
 import com.boardgame.server.Client.GameFrame;
 
 public class RealButton implements Buttons {
