@@ -8,12 +8,14 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 
+import com.boardgame.GameWindow.Lab2.ChainOfResponsibility2.*;
 import com.boardgame.GameWindow.Logic.AbstractFactory.Car;
 import com.boardgame.GameWindow.Logic.AbstractFactory.FactoryProvider;
 import com.boardgame.GameWindow.Logic.AbstractFactory.Plane;
 import com.boardgame.GameWindow.Logic.AbstractFactory.Tank;
 import com.boardgame.server.Lab2.IteratorPattern.BoardRepository;
 import com.boardgame.server.Lab2.IteratorPattern.Iterator;
+import jdk.nashorn.internal.runtime.logging.DebugLogger;
 
 
 public class BoardLayout {
@@ -23,6 +25,10 @@ public class BoardLayout {
     private JPanel Board;
     private Path path = new Path(Dimensions);
     private BoardRepository boardIterator;
+
+
+
+
     public BoardLayout(Square[] boardSquares, JPanel board) {
         this.Board = board;
         boardIterator = new BoardRepository(Dimensions*Dimensions);

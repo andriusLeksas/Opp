@@ -13,6 +13,10 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import com.boardgame.GameWindow.Lab2.ChainOfResponsibility2.AbstractLogger;
+import com.boardgame.GameWindow.Lab2.ChainOfResponsibility2.ConsoleLogger;
+import com.boardgame.GameWindow.Lab2.ChainOfResponsibility2.ErrLogger;
+import com.boardgame.GameWindow.Lab2.ChainOfResponsibility2.DebugLogger;
 import com.boardgame.GameWindow.Logic.AdapterPattern.Adapter;
 import com.boardgame.GameWindow.Logic.AdapterPattern.Target;
 import com.boardgame.GameWindow.Logic.BoardLayout;
@@ -56,6 +60,8 @@ public class Client extends JPanel{
 				o.update(asd);
 			}
 		}
+
+
 
 		AbstractBomb TntRemote = new RefinedBombTnt(new ConcreteDetonationRemote());
 		AbstractBomb TntStandart = new RefinedBombTnt(new ConcreteDetonationStandart());
@@ -484,17 +490,42 @@ public class Client extends JPanel{
 	public JTextArea   chatBox;
 
 
+
+	private static AbstractLogger getChainOfLoggers(){
+
+		AbstractLogger errorLogger = new ErrLogger(AbstractLogger.ERROR);
+		AbstractLogger debugLogger = new DebugLogger(AbstractLogger.DEBUG);
+		AbstractLogger consoleLogger = new ConsoleLogger(AbstractLogger.INFO);
+
+		errorLogger.setNextLogger(debugLogger);
+		debugLogger.setNextLogger(consoleLogger);
+
+		return errorLogger;
+	}
+
+
 	public static void main(String args[]) throws IOException
 	{
+
 		GameAccess access = new GameAccess();
+
+		AbstractLogger loggerChain = getChainOfLoggers();
+
+		loggerChain.logMessage(AbstractLogger.DEBUG,
+				"This is a debug level information.");
+
         try {
+			loggerChain.logMessage(AbstractLogger.INFO, "Server has started correctly");
 			access.InitSocket(address,port, access);
         } catch (IOException ex) {
-			ErrorLogger.log("Cannot connect to " + address + ":" + port);
-            System.out.println("Cannot connect to " + address + ":" + port);
+			loggerChain.logMessage(AbstractLogger.ERROR,
+					"Cannot connect to " + address + ":" + port);
+//			ErrorLogger.log("Cannot connect to " + address + ":" + port);
+//            System.out.println("Cannot connect to " + address + ":" + port);
             ex.printStackTrace();
             System.exit(0);
         }
+
 	}
 	
 }
